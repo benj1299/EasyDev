@@ -1,0 +1,7 @@
+ed_generator:
+    resource: "@EDGeneratorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+coresphere_console:
+    resource: .
+    type: extra

@@ -1,0 +1,47 @@
+{% extends "EDGeneratorBundle::layout.html.twig" %}
+{% block ed_body %}
+    {{ form_start(form) }}
+    {{  form_errors(form) }}
+         <div class="col-md-6">
+            <div class="form-group">
+                {{ form_widget(form.projectname) }}
+            </div>
+            <p>Options :</p>
+             {{ form_widget(form.check1) }}
+             {{ form_widget(form.check2) }}
+             {{ form_widget(form.check3) }}
+             {{ form_widget(form.check4) }}
+             {{ form_widget(form.check5) }}
+             {{ form_widget(form.check6) }}
+             {{ form_widget(form.check7) }}
+             {{ form_widget(form.check8) }}
+            <div class="form-group">
+                {{ form_widget(form.packagist) }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                {{ form_widget(form.bddname) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.bddid) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.bddpass) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.htmlfile) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.cssfile) }}
+            </div>
+            <div class="form-group">
+                {{ form_row(form.jsfile) }}
+            </div>
+        </div>
+        <div class="text-center">
+             {{ form_widget(form.save) }}
+        </div>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}

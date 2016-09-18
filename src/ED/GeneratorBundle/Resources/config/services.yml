@@ -1,0 +1,7 @@
+services:
+
+    ed.generator:
+        class: ED\GeneratorBundle\Generator\Generator
+
+    ed.generator_FormContact:
+        class: ED\GeneratorBundle\Generator\Functions\FormContact
