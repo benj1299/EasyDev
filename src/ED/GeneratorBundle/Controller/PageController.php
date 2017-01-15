@@ -6,30 +6,43 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use ED\GeneratorBundle\Form\EdType;
 use ED\GeneratorBundle\Entity\GeneratorValidation;
+use ED\GeneratorBundle\Generator\Generator;
 
 class PageController extends Controller
 {
     public $json = [];
+    public $check = ['check1' => 'ed_contact'];
 
     public function indexAction(Request $request)
     {
-
+        //Création du formulaire dans la vue avec vérification
         $validation = new GeneratorValidation;
         $form = $this->createForm(EdType::class, $validation);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+            $generator = new Generator($validation->getProjectname());
 
-            $html = ($validation->getHtmlfile()) ? $this->get('ed.generator')->upload($validation->getHtmlfile()) : null;
-            $css  = ($validation->getCssfile()) ? $this->get('ed.generator')->upload($validation->getCssfile()) : null;
-            $js   = ($validation->getJsfile()) ? $this->get('ed.generator')->upload($validation->getJsfile()) : null;
-            $this->json['projectname'] = $validation->getProjectname();
+            //Génération du dossier de base
+            $generator->baseGenerator();
 
-            if($form['check1']->getData())
-            {
-                $this->json['contact'] = $this->get('ed.generator_FormContact')->check($html);
+            //Upload des fichiers
+            $generator->upload($validation);
+
+            //Inserer une boucle pour tous les fichiers
+            $bundlepath = $generator->addHtmlFile();
+
+            //Ajout des options dans le json
+            foreach ($this->check as $key => $name) {
+                if($form["$key"]->getData()) { $this->json["$name"] = $generator->check($bundlepath, $name); }
             }
 
-            $this->get('ed.generator')->jsoncreate($this->json);
+            $generator->addFunctions($this->json);
+            //Fin de la boucle
+
+            //Ajout des assets
+            $generator->addAssetFile();
+
+            $generator->jsonCreate($this->json);
         }
         return $this->render('EDGeneratorBundle:Page:index.html.twig', ['form' => $form->createView()]);
     }

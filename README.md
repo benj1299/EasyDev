@@ -1,4 +1,3 @@
 Test
 ====
-
-A Symfony project created on September 15, 2016, 9:21 pm.
+-Revoir la fonction preg() dans le Generator.php car détecte les names mais pas lesquelles ils se trouvent.

@@ -25,7 +25,7 @@ class EdType extends AbstractType
             ->add('check6',      CheckboxType::class, ['required' => false, 'label' => "Espace d'adminitration du site"])
             ->add('check7',      CheckboxType::class, ['required' => false, 'label' => "Espace membre"])
             ->add('check8',      CheckboxType::class, ['required' => false, 'label' => "Barre de recherche"])
-            ->add('packagist',   SearchType::class,   ['required' => false, 'attr' => ['placeholder' => 'Rechercher sur packagist'], 'label' => false])
+            ->add('packagist',   SearchType::class,   ['required' => false, 'attr' => ['placeholder' => "Recherche d'une fonction"], 'label' => false])
             ->add('bddname',     TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Nom de la base de données'], 'label' => false])
             ->add('bddid',       TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Identifiant de la base de données'], 'label' => false])
             ->add('bddpass',     PasswordType::class, ['required' => false, 'attr' => ['placeholder' => 'Mot de passe de la base de données'], 'label' => false])

@@ -3,29 +3,90 @@
 namespace ED\GeneratorBundle\Generator\Functions;
 
 use ED\GeneratorBundle\Generator\Generator;
+use Symfony\Component\Filesystem\Filesystem;
 
-class FormContact extends Generator {
+class FormContact extends Generator  {
 
-    public function create($json)
+    protected $file;
+    protected $fileName;
+    protected $bundlepath;
+    protected $data;
+
+    public function __construct($bundlepath, $projectname ,$fileName)
     {
-        $json = "$this->path/$json";
-        $json = json_decode($json);
-            if($json['contact'])
-            {
+        parent::__construct($projectname);
+
+        $this->bundlepath = $bundlepath;
+        $this->fileName = $fileName;
+        $this->file = "$this->bundlepath/Resources/views/$this->projectname/$fileName.html.twig";
+
+        //Créé le dossier Form
+        $fs = new Filesystem();
+        $fs->mkdir("$this->bundlepath/Form/", 0777);
+
+        //Variable de contenu
+        $use = "use Symfony\Component\Form\AbstractType;\nuse Symfony\Component\Form\FormBuilderInterface;";
+
+        $content = '<?php
+namespace Main\\'.$this->bundlename.'\Form;
+
+'.$use.'
+
+class '.ucfirst($this->fileName).'Form extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder';
+/*
+        //Détection des composants du form
+        $out = $this->match_file_all("#<input .*type=('|\")(.*)('|\").*>#", $this->file);
+        $input = $out[2];
+
+        foreach ($input as $name){
+            $type = ["text" => "TextType::class", "password" => ""];
+            foreach ($type as $pattern => $class){
+                if(preg_match("#^$pattern#", $name))
+                {
+                    $use .= "\n use Symfony\Component\Form\Extension\Core\Type\\$class;"
+                    $content .= "\n->add('$name', $class)"
+                }
             }
+
+        }
+*/
+        //Génère le fichier
+        $this->filewrite("$this->bundlepath/Form/".ucfirst($this->fileName)."Form.php", $content);
+        $this->FormGenerator();
     }
 
-    public function check($file)
+    //Génère la vue
+    private function FormGenerator()
     {
-       $html = file_get_contents($file);
-       if($this->preg('ed_contact', $html))
+        //Balise à remplace dans la vue
+        $add = ["<form (.*)>" => "{{ form_start(form) }}", '</form>' => "{{ form_rest(form) }}\n{{ form_end(form) }}",
+            "<input .*name=('|\")contact_name('|\").*>" => "{{ form_widget(form.contact_name) }}",
+            "<input .*name=('|\")contact_email('|\").*>" => "{{ form_widget(form.contact_email) }}",
+            "<input .*name=('|\")contact_subject('|\").*>" => "{{ form_widget(form.contact_subject) }}",
+            "<input .*name=('|\")contact_tel('|\").*>" => "{{ form_widget(form.contact_tel) }}",
+            "<textarea .*name=('|\")contact_message('|\").*>(.*)</textarea>" => "{{ form_widget(form.contact_message) }}"];
+
+        foreach ($add as $pattern => $replace)
         {
-            if($this->preg('contact_name', $html)) {$this->Valid('contact_name');}
-            if($this->preg('contact_email', $html)) {$this->Valid('contact_email');}
-            if($this->preg('contact_subject', $html)) {$this->Valid('contact_subject');}
-            if($this->preg('contact_tel', $html)) {$this->Valid('contact_tel');}
-            if($this->preg('contact_message', $html)) {$this->Valid('contact_message');}
+            $this->replace_file("#$pattern#", $replace, $this->file);
+            $this->data[] = $replace;
         }
-        return $this->data;
     }
+
+    //Génère la validation du form
+    private function ValidationGenerator()
+    {
+
+    }
+
+    //Génère la fonction d'envoie d'email
+    private function ContactFunction()
+    {
+
+    }
+
 }

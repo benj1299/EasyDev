@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26aff39e-a3b7-4b91-a5d8-25323de3ba2d" name="Default" comment="" />
+    <ignored path="EasyDev.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="EasyDev" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Generator.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-240">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="20" />
+              <folding>
+                <element signature="e#48#103#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" column="86" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+              <folding>
+                <element signature="e#49#106#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tmp/238140e76466d2/Test #11/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/composer.json" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/db1e485e41a8116c/db1e485e41a8116c.html" />
+        <option value="$PROJECT_DIR$/tmp/3089135b6a1a/test 2/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/../test.php" />
+        <option value="$PROJECT_DIR$/tmp/554b6e519336b5ae5edfe5/554b6e519336b5ae5edfe5.html" />
+        <option value="$PROJECT_DIR$/tmp/4b9f42df258f/4b9f42df258f.html" />
+        <option value="$PROJECT_DIR$/tmp/2c49734bba171f21987f19/test/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Command/BundleGenerate.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Command/Command.php" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/tmp/b1742ea6fa3db0e2a60a7c/Test/src/Main/TestBundle/Controller/TestController.php" />
+        <option value="$PROJECT_DIR$/tmp/9ccf314ccd607f/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/LoaderEvent/Listener.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/LoaderEvent/Loader.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Listener/Load.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Loader/Load.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Loader/EndLoad.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Loader/StartLoad.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Listener/LoadListener.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Listener/EndLoadListener.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Listener/StartLoadListener.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/config/services.yml" />
+        <option value="$PROJECT_DIR$/tmp/122dfaa7ae58f63e21b06076/Test/src/Main/TestBundle/Controller/TestController.php" />
+        <option value="$PROJECT_DIR$/tmp/bdef1d0913ce/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/fc1b43b1d2110b5b39/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+        <option value="$PROJECT_DIR$/tmp/e0b920873b942ca2acf56475/Test/app/Resources/views/base.html.twig" />
+        <option value="/private/etc/apache2/httpd.conf" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/Functions.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Library.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$USER_HOME$/Desktop/index.html" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" />
+        <option value="$PROJECT_DIR$/tmp/Test_249c111c80/Test/src/Main/TestBundle/Form/indexForm.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/FormContact.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Entity/GeneratorValidation.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Form/EdType.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/ED/CoreBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/views/Page/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ED" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GeneratorBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ED" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Listener" />
+      <recent name="$PROJECT_DIR$/src/ED/GeneratorBundle/Events/Loader" />
+      <recent name="$PROJECT_DIR$/app/Resources/TwigBundle/views" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/views" />
+      <recent name="$PROJECT_DIR$/src/ED/CoreBundle/Resources/views" />
+      <recent name="$PROJECT_DIR$/src/ED/GeneratorBundle" />
+      <recent name="$PROJECT_DIR$/tmp" />
+      <recent name="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26aff39e-a3b7-4b91-a5d8-25323de3ba2d" name="Default" comment="" />
+      <created>1472183470679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1472183470679</updated>
+      <workItem from="1472183472109" duration="7758000" />
+      <workItem from="1472207062699" duration="1836000" />
+      <workItem from="1472297758282" duration="24000" />
+      <workItem from="1472302745483" duration="1580000" />
+      <workItem from="1472476949695" duration="1161000" />
+      <workItem from="1472491913019" duration="2646000" />
+      <workItem from="1472558430636" duration="2783000" />
+      <workItem from="1472577246221" duration="6154000" />
+      <workItem from="1472640668805" duration="380000" />
+      <workItem from="1472660289677" duration="3624000" />
+      <workItem from="1472665031708" duration="628000" />
+      <workItem from="1472708105958" duration="1127000" />
+      <workItem from="1472998411307" duration="6490000" />
+      <workItem from="1473104384212" duration="695000" />
+      <workItem from="1473441775360" duration="320000" />
+      <workItem from="1473597888585" duration="4439000" />
+      <workItem from="1473606837402" duration="1576000" />
+      <workItem from="1473622561229" duration="1028000" />
+      <workItem from="1473698086801" duration="2514000" />
+      <workItem from="1473963207042" duration="3529000" />
+      <workItem from="1473967271626" duration="353000" />
+      <workItem from="1473967685806" duration="585000" />
+      <workItem from="1474123024693" duration="2206000" />
+      <workItem from="1474202237066" duration="2089000" />
+      <workItem from="1474205043123" duration="606000" />
+      <workItem from="1474206475044" duration="325000" />
+      <workItem from="1474219655412" duration="1859000" />
+      <workItem from="1474403735343" duration="1064000" />
+      <workItem from="1474714167447" duration="11000" />
+      <workItem from="1474919790090" duration="40000" />
+      <workItem from="1475774809299" duration="4551000" />
+      <workItem from="1475872242866" duration="689000" />
+      <workItem from="1476133854604" duration="1423000" />
+      <workItem from="1476278098413" duration="594000" />
+      <workItem from="1476297175537" duration="1385000" />
+      <workItem from="1476384036037" duration="3194000" />
+      <workItem from="1476735615566" duration="1802000" />
+      <workItem from="1476811281272" duration="7971000" />
+      <workItem from="1476896491848" duration="3712000" />
+      <workItem from="1477047984714" duration="1926000" />
+      <workItem from="1477152211489" duration="368000" />
+      <workItem from="1477153136356" duration="59000" />
+      <workItem from="1477216273268" duration="8270000" />
+      <workItem from="1477258721060" duration="1683000" />
+      <workItem from="1477271446842" duration="14155000" />
+      <workItem from="1477318461614" duration="3709000" />
+      <workItem from="1477333492975" duration="571000" />
+      <workItem from="1477397236480" duration="1835000" />
+      <workItem from="1477399590154" duration="6724000" />
+      <workItem from="1477478954573" duration="1297000" />
+      <workItem from="1477498838042" duration="654000" />
+      <workItem from="1477573479895" duration="2615000" />
+      <workItem from="1477591855299" duration="511000" />
+      <workItem from="1477645176738" duration="4598000" />
+      <workItem from="1477649991099" duration="57000" />
+      <workItem from="1477660970810" duration="5443000" />
+      <workItem from="1477736934845" duration="721000" />
+      <workItem from="1477837000255" duration="1910000" />
+      <workItem from="1478042847449" duration="9618000" />
+      <workItem from="1478085732130" duration="4597000" />
+      <workItem from="1478288287865" duration="5465000" />
+      <workItem from="1478294251110" duration="278000" />
+      <workItem from="1478361234715" duration="49000" />
+      <workItem from="1478919797578" duration="55000" />
+      <workItem from="1480724438262" duration="76000" />
+      <workItem from="1480724516747" duration="1000" />
+      <workItem from="1480768074639" duration="616000" />
+      <workItem from="1482673261263" duration="136000" />
+      <workItem from="1484494924282" duration="1328000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="164076000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51371807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51371807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="php">
+          <url>file://$PROJECT_DIR$/src/ED/GeneratorBundle/Entity/GeneratorValidation.php</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tmp/4202be5dca62512e0d2a/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/0eac75bb0ad9a77d50bc3d/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/7decbb82a4bd993a/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/ff3e5355d5d4/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/34a5e0088bce99cbc0a6f28d/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/a641e894339f/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/e24dc8f3f692f7f107/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/d035255fca9a/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file:///private/etc/apache2/httpd.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="182" column="9" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/c62385555669640389/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/9a6aa8a96d33a3/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/a371460d435179/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/5b45263590079f/config_5b45263590079f.json" />
+    <entry file="file://$PROJECT_DIR$/tmp/5b45263590079f/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/twig/8c/8cf3fc08123030bab5b79e0d6a1537d1d3d36567cca77983e0574b8befc60d1c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2592">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/bbd76981cec6985e94d3b4/Test/src/Main/TestBundle/Form/Form.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/eaa953240a13/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/3e596347571a45/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/Functions.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/b4406b75641c868a8bb3/config_b4406b75641c868a8bb3.json" />
+    <entry file="file://$PROJECT_DIR$/tmp/b4406b75641c868a8bb3/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/02b9a030918b7d8da66a/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="48">
+            <caret line="2" column="107" selection-start-line="2" selection-start-column="107" selection-end-line="2" selection-end-column="107" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Test_f533/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$USER_HOME$/Desktop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Test_598754/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_598754/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_55d4a9e722/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_8ba3920980/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_eaca55ba/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_eaca55ba/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_eaca55ba/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_a651/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Test_249c111c80/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_249c111c80/Test/src/Main/TestBundle/Form/indexForm.php" />
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/FormContact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="57" column="75" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/polyfill-php70/Resources/stubs/AssertionError.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Entity/GeneratorValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Form/EdType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="27" column="129" selection-start-line="27" selection-start-column="129" selection-end-line="27" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/CoreBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/views/Page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="86" selection-start-line="21" selection-start-column="86" selection-end-line="21" selection-end-column="86" />
+          <folding>
+            <element signature="e#49#106#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#48#103#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Command/BundleGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

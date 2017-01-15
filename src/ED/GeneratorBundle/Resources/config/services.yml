@@ -1,5 +1,4 @@
 services:
-
     ed.generator:
         class: ED\GeneratorBundle\Generator\Generator
 
