@@ -12,13 +12,13 @@ class FormContact extends Generator  {
     protected $bundlepath;
     protected $data;
 
-    public function __construct($bundlepath, $projectname ,$fileName)
+    public function __construct($bundlepath ,$fileName)
     {
-        parent::__construct($projectname);
+        parent::__construct($infos);
 
         $this->bundlepath = $bundlepath;
         $this->fileName = $fileName;
-        $this->file = "$this->bundlepath/Resources/views/$this->projectname/$fileName.html.twig";
+        $this->file = "$this->bundlepath/Resources/views/".$this->infos->projectname."/$fileName.html.twig";
 
         //Créé le dossier Form
         $fs = new Filesystem();

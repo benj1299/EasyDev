@@ -16,23 +16,21 @@ class EdType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('projectname', TextType::class,     ['attr' => ['placeholder' => 'Nom du projet', 'class' => 'form-control'], 'label' => false])
-            ->add('check1',      CheckboxType::class, ['required' => false, 'label' => 'Formulaire de contact'])
+            ->add('projectname', TextType::class,     ['attr' => ['placeholder' => 'Projectname', 'class' => 'form-control'], 'label' => false])
+            ->add('check1',      CheckboxType::class, ['required' => false, 'label' => 'Contact form'])
             ->add('check2',      CheckboxType::class, ['required' => false, 'label' => 'Newsletter'])
             ->add('check3',      CheckboxType::class, ['required' => false, 'label' => 'Pagination'])
-            ->add('check4',      CheckboxType::class, ['required' => false, 'label' => 'Affichage de données de la BDD (ex: articles)'])
-            ->add('check5',      CheckboxType::class, ['required' => false, 'label' => 'Post de données de la BDD (ex: articles)'])
-            ->add('check6',      CheckboxType::class, ['required' => false, 'label' => "Espace d'adminitration du site"])
-            ->add('check7',      CheckboxType::class, ['required' => false, 'label' => "Espace membre"])
-            ->add('check8',      CheckboxType::class, ['required' => false, 'label' => "Barre de recherche"])
-            ->add('packagist',   SearchType::class,   ['required' => false, 'attr' => ['placeholder' => "Recherche d'une fonction"], 'label' => false])
-            ->add('bddname',     TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Nom de la base de données'], 'label' => false])
-            ->add('bddid',       TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Identifiant de la base de données'], 'label' => false])
-            ->add('bddpass',     PasswordType::class, ['required' => false, 'attr' => ['placeholder' => 'Mot de passe de la base de données'], 'label' => false])
-            ->add('htmlfile',    FileType::class,     ['label' => 'Fichiers HTML'])
-            ->add('cssfile',     FileType::class,     ['required' => false, 'label' => 'Fichiers CSS'])
-            ->add('jsfile',      FileType::class,     ['required' => false, 'label' => 'Fichiers JS'])
-            ->add('save',        SubmitType::class,   ['label' => 'Envoyer']);
+            ->add('check4',      CheckboxType::class, ['required' => false, 'label' => "Admin Area"])
+            ->add('check5',      CheckboxType::class, ['required' => false, 'label' => "Members Area"])
+            ->add('check6',      CheckboxType::class, ['required' => false, 'label' => "Search Bar"])
+            ->add('check7',      CheckboxType::class, ['required' => false, 'label' => 'Affichage de données de la BDD (ex: articles)'])
+            ->add('check8',      CheckboxType::class, ['required' => false, 'label' => 'Post de données de la BDD (ex: articles)'])
+            ->add('sql',         FileType::class,     ['required' => false, 'label' => 'Add your database', 'attr' => ['id' => 'sql', 'class' => 'files', 'data-preview-file-type' => 'text']])
+            ->add('bddname',     TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Database name'], 'label' => false])
+            ->add('bddid',       TextType::class,     ['required' => false, 'attr' => ['placeholder' => 'Database login'], 'label' => false])
+            ->add('bddpass',     PasswordType::class, ['required' => false, 'attr' => ['placeholder' => 'Database password'], 'label' => false])
+            ->add('files',       FileType::class,     ['required' => false, 'label' => 'Add your files', 'attr' => ['id' => 'files', 'class' => 'files', 'data-preview-file-type' => 'text']])
+            ->add('save',        SubmitType::class,   ['label' => 'Send']);
     }
 
 }

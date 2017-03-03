@@ -1,4 +1,10 @@
 {% extends "::base.html.twig" %}
+{% block css %}
+    {% stylesheets 'bundles/edcore/css/*' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {% block ed_css %}{% endblock %}
+{% endblock %}
 {% block body %}
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -19,4 +25,10 @@
     <footer>
         <p class="text-center">©2017 - EasyDev, Inc.</p>
     </footer>
+{% endblock %}
+{% block js %}
+    {% javascripts '@EDCoreBundle/Resources/public/js/*' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% block ed_js %}{% endblock %}
 {% endblock %}

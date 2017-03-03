@@ -9,78 +9,55 @@ class GeneratorValidation
      * @Assert\Length(max=255)
      * @Assert\NotBlank()
      */
-    protected $projectname;
+    public $projectname;
     /**
      * @Assert\Type("bool")
      */
-    protected $check1;
+    public $check1;
     /**
      * @Assert\Type("bool")
      */
-    protected $check2;
+    public $check2;
     /**
      * @Assert\Type("bool")
      */
-    protected $check3;
+    public $check3;
     /**
      * @Assert\Type("bool")
      */
-    protected $check4;
+    public $check4;
     /**
      * @Assert\Type("bool")
      */
-    protected $check5;
+    public $check5;
     /**
      * @Assert\Type("bool")
      */
-    protected $check6;
+    public $check6;
     /**
      * @Assert\Type("bool")
      */
-    protected $check7;
+    public $check7;
     /**
      * @Assert\Type("bool")
      */
-    protected $check8;
+    public $check8;
     /**
      * @Assert\Type("string")
      */
-    protected $packagist;
-    protected $bddname;
-    protected $bddid;
-    protected $bddpass;
+    public $sql;
+    public $bddname;
+    public $bddid;
+    public $bddpass;
     /**
      * @Assert\File(
      *     binaryFormat = false,
      *     maxSize = "40Mi",
-     *     mimeTypes = {"text/html"},
-     *     mimeTypesMessage = "Veuillez entrer un fichier html valide",
      *     maxSizeMessage = "Le fichier est trop grand ({{ size }} {{ suffix }}). La taille maximum autorisée est de {{ limit }} {{ suffix }}.",
      *     disallowEmptyMessage = "Vous n'avez pas uploadé de fichier"
      * )
      */
-    protected $htmlfile;
-    /**
-     * @Assert\File(
-     *     binaryFormat = false,
-     *     maxSize = "40Mi",
-     *     mimeTypes = {"text/css"},
-     *     mimeTypesMessage = "Veuillez entrer un fichier css valide",
-     *     maxSizeMessage = "Le fichier est trop grand ({{ size }} {{ suffix }}). La taille maximum autorisée est de {{ limit }} {{ suffix }}.",
-     * )
-     */
-    protected $cssfile;
-    /**
-     * @Assert\File(
-     *     binaryFormat = false,
-     *     maxSize = "40Mi",
-     *     mimeTypes = {"text/javascript"},
-     *     mimeTypesMessage = "Veuillez entrer un fichier javascript valide",
-     *     maxSizeMessage = "Le fichier est trop grand ({{ size }} {{ suffix }}). La taille maximum autorisée est de {{ limit }} {{ suffix }}.",
-     * )
-     */
-    protected $jsfile;
-
+    public $files;
                                     /*GETTERS AND SETTERS*/
 
     /**
@@ -230,17 +207,17 @@ class GeneratorValidation
     /**
      * @return mixed
      */
-    public function getPackagist()
+    public function getSql()
     {
-        return $this->packagist;
+        return $this->sql;
     }
 
     /**
-     * @param mixed $packagist
+     * @param mixed $sql
      */
-    public function setPackagist($packagist)
+    public function setSql($sql)
     {
-        $this->packagist = $packagist;
+        $this->sql = $sql;
     }
 
     /**
@@ -294,48 +271,17 @@ class GeneratorValidation
     /**
      * @return mixed
      */
-    public function getHtmlfile()
+    public function getFiles()
     {
-        return $this->htmlfile;
+        return $this->files;
     }
 
     /**
-     * @param mixed $htmlfile
+     * @param mixed $files
      */
-    public function setHtmlfile($htmlfile)
+    public function setFiles($files)
     {
-        $this->htmlfile = $htmlfile;
+        $this->files = $files;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCssfile()
-    {
-        return $this->cssfile;
-    }
-
-    /**
-     * @param mixed $cssfile
-     */
-    public function setCssfile($cssfile)
-    {
-        $this->cssfile = $cssfile;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getJsfile()
-    {
-        return $this->jsfile;
-    }
-
-    /**
-     * @param mixed $jsfile
-     */
-    public function setJsfile($jsfile)
-    {
-        $this->jsfile = $jsfile;
-    }
 }

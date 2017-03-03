@@ -20,13 +20,12 @@ class PageController extends Controller
         $form = $this->createForm(EdType::class, $validation);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $generator = new Generator($validation->getProjectname());
+            $generator = new Generator($validation);
 
             //Génération du dossier de base
             $generator->baseGenerator();
-
             //Upload des fichiers
-            $generator->upload($validation);
+            $generator->upload();
 
             //Inserer une boucle pour tous les fichiers
             $bundlepath = $generator->addHtmlFile();
@@ -42,7 +41,7 @@ class PageController extends Controller
             //Ajout des assets
             $generator->addAssetFile();
 
-            $generator->jsonCreate($this->json);
+            $generator->InfosCreate($this->json);
         }
         return $this->render('EDGeneratorBundle:Page:index.html.twig', ['form' => $form->createView()]);
     }

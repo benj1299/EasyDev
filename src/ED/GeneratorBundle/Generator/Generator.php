@@ -2,6 +2,7 @@
 
 namespace ED\GeneratorBundle\Generator;
 
+use ED\GeneratorBundle\Command\BundleClientCommand;
 use ED\GeneratorBundle\Generator\Functions\FormContact;
 use \ZipArchive;
 
@@ -9,6 +10,7 @@ class Generator extends Library
 {
     protected static $id;
     protected $path;
+    protected $infos;
     protected $projectname;
     protected $bundlename;
     protected $bundlepath;
@@ -16,10 +18,11 @@ class Generator extends Library
     protected $fileCss;
     protected $fileJs;
 
-    public function __construct($projectname)
+    public function __construct($infos)
     {
         self::$id = bin2hex(openssl_random_pseudo_bytes(random_int(2, 5)));
-        $this->projectname = strip_tags(addslashes(ucfirst($projectname)));
+        $this->infos = $infos;
+        $this->projectname = strip_tags(addslashes(ucfirst($this->infos->projectname)));
         $this->path = "../tmp/".$this->projectname."_".self::$id;
         $this->bundlename = $this->projectname."Bundle";
         $this->bundlepath = "$this->path/$this->projectname/src/Main/$this->bundlename";
@@ -48,27 +51,33 @@ class Generator extends Library
 
             //Ecriture du layout
             $this->filewrite("$this->bundlepath/Resources/views/layout.html.twig", "{% extends '::base.html.twig' %}\n{% block body %}\n{% block ".$this->projectname."_body %}{% endblock %}\n{% endblock %}");
+
+            //Ecriture du fichier bundle
+            rename("$this->path/$this->projectname/src/Main/$this->bundlename/MainEDBundle.php", "$this->path/$this->projectname/src/Main/$this->bundlename/Main$this->bundlename.php");
+            $this->replace_file("#EdBundle#i", $this->bundlename, "$this->path/$this->projectname/src/Main/$this->bundlename/Main$this->bundlename.php");
         }
     }
 
-    public function upload($file)
+    public function upload()
     {
-        if ($file->getHtmlfile()->guessExtension() == 'html') {
-            $this->fileHtml = $file->getHtmlfile()->getClientOriginalName();
-            $file->getHtmlfile()->move($this->path, $this->fileHtml);
+        if ($this->infos->getfiles()->guessExtension() == 'html') {
+            $this->fileHtml = $this->infos->getfiles()->getClientOriginalName();
+            $this->infos->getfiles()->move($this->path, $this->fileHtml);
             return "$this->path/$this->fileHtml";
         }
-        if ($file->getCssfile()->guessExtension() == 'css') {
-            $this->fileCss = $file->getCssfile()->getClientOriginalName();
-            $file->getCssfile()->move($this->path, $this->fileCss);
+        elseif ($this->infos->getfiles()->guessExtension() == 'css') {
+            $this->fileCss = $this->infos->getfiles()->getClientOriginalName();
+            $this->infos->getfiles()->move($this->path, $this->fileCss);
             return "$this->path/$this->fileCss";
         }
-        if ($file->getJsfile()->guessExtension() == 'js') {
-            $this->fileJs = $file->getJsfile()->getClientOriginalName();
-            $file->getJsfile()->move($this->path, $this->fileJs);
+        elseif ($this->infos->getfiles()->guessExtension() == 'js') {
+            $this->fileJs = $this->infos->getfiles()->getClientOriginalName();
+            $this->infos->getfiles()->move($this->path, $this->fileJs);
             return "$this->path/$this->fileJs";
         }
-        // return une erreur
+        else {
+            // return une erreur
+        }
     }
 
     public function addHtmlFile() {
@@ -82,7 +91,7 @@ class Generator extends Library
             $this->replace_file("#<script(.*?)>(.*)<\/script>#is", "", $basefile, 1);
             //Création des assets
             $this->replace_file("#<title>(.*)</title>#is", "<title>{% block title %}{% endblock %}</title>\n{% stylesheets 'bundles/$this->projectname/css/*' filter='cssrewrite' %}<link rel='stylesheet' href='{{ asset_url }}' />{% endstylesheets %}", $basefile);
-            $this->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}\n{% javascripts '@Main$this->bundlename/Resources/public/js/*' %}<script src='{{ asset_url }}'></script>{% endjavascripts %}\n{% endblock %}\n</body>", $basefile);
+            $this->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}{% endblock %}\n</body>", $basefile);
         }
         //Déplace le fichier dans les vues
         rename("$this->path/$this->fileHtml", "$this->bundlepath/Resources/views/$this->projectname/$this->fileHtml.twig");
@@ -91,11 +100,11 @@ class Generator extends Library
         $this->replace_file("#Default#", $this->projectname, "$this->bundlepath/Controller/" . $this->projectname . "Controller.php", 1);
         $this->replace_file("#EdBundle#", $this->bundlename, "$this->bundlepath/Controller/" . $this->projectname . "Controller.php", 1);
         $this->replace_file("#extends Controller\n{#",
-            "extends Controller {\n public function ".$file."Action(){ return \$this->render('Main$this->bundlename:$this->projectname:$file'); }",
+            "extends Controller {\n public function ".$file."Action(){ return \$this->render('Main$this->bundlename:$this->projectname:$this->fileHtml.twig'); }",
             "$this->bundlepath/Controller/" . $this->projectname . "Controller.php");
 
         //Ecriture de la route
-        $this->filewrite("$this->bundlepath/Resources/config/routing.yml", "main_$file:\n\tpath:     /\n\tdefaults: { _controller: Main$this->bundlename:$this->projectname:$file }\n");
+        $this->filewrite("$this->bundlepath/Resources/config/routing.yml", "main_$file:\n\040\040\040\040path:     /\n\040\040\040\040defaults: { _controller: Main$this->bundlename:$this->projectname:$file }\n");
 
         //Ecriture des vues
         $titre = $this->match_file_all("#<title>(.*)</title>#is", "$this->bundlepath/Resources/views/$this->projectname/$this->fileHtml.twig");
@@ -115,16 +124,30 @@ class Generator extends Library
     public function addFunctions(array $json)
     {
         $file = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $this->fileHtml));
-        if($json['ed_contact'] === true)
+        if(!empty($json['ed_contact']) && $json['ed_contact'] === true)
         {
-            new FormContact($this->bundlepath, $this->projectname, $file);
+            new FormContact($this->bundlepath, $file);
+        }
+        if(!empty($json['ed_fos_admin']) && $json['ed_fos_admin'] === true)
+        {
+            new FOSAdmin($this->bundlepath, $file);
         }
     }
 
-    public function jsonCreate(array $json){
+    public function InfosCreate(array $json){
         $json['projectname'] = $this->projectname;
+        //Créé le json
         $file = fopen("$this->path/config_".self::$id.".json", 'w+');
         fputs($file, json_encode($json));
+        fclose($file);
+        //Créé le TODO
+        $todo = "cmd :\r\n
+        composer update\r\n
+        php bin/console cache:clear\r\n
+        php bin/console assets:install\r\n
+        php bin/console server:run\r\n";
+        $file = fopen("$this->path/TODO.txt", 'w+');
+        fputs($file, $todo);
         fclose($file);
     }
 }

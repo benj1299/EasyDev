@@ -1,5 +1,7 @@
 {% extends "EDCoreBundle::layout.html.twig" %}
+{% block ed_css %}{% endblock %}
 {% block ed_body %}
+    <h2 class="text-center">Choose your options and rest you</h2>
     {{ form_start(form) }}
     {{  form_errors(form) }}
          <div class="col-md-6">
@@ -15,9 +17,6 @@
              {{ form_widget(form.check6) }}
              {{ form_widget(form.check7) }}
              {{ form_widget(form.check8) }}
-            <div class="form-group">
-                {{ form_widget(form.packagist) }}
-            </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
@@ -30,13 +29,10 @@
                 {{ form_widget(form.bddpass) }}
             </div>
             <div class="form-group">
-                {{ form_row(form.htmlfile) }}
+                    {{ form_row(form.sql) }}
             </div>
             <div class="form-group">
-                {{ form_row(form.cssfile) }}
-            </div>
-            <div class="form-group">
-                {{ form_row(form.jsfile) }}
+                    {{ form_row(form.files) }}
             </div>
         </div>
         <div class="text-center">
@@ -44,4 +40,8 @@
         </div>
     {{ form_rest(form) }}
     {{ form_end(form) }}
+{% endblock %}
+{% block ed_js %}
+    <script>$("#ed_sql").fileinput();</script>
+    <script>$("#ed_files").fileinput();</script>
 {% endblock %}
