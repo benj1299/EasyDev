@@ -1,22 +1,22 @@
 <?php
 
-namespace ED\GeneratorBundle\Generator;
+namespace ED\TextParserBundle\TextParser;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class Library extends Controller
+class TextParser extends Controller
 {
-    protected $data = [];
+    public $data = [];
 
-    protected function preg($name, $chaine){
+    public function preg($name, $chaine){
         return preg_match("#name\=\'$name\'|name\=\"$name\"#i", $chaine);
     }
 
-    protected function Valid($field){
+    public function Valid($field){
         $this->data[$field] = true;
     }
 
-    protected function replace_file($string, $replace, $file, $limit = -1){
+    public function replace_file($string, $replace, $file, $limit = -1){
         $text = fopen($file, 'r');
         $str = file_get_contents($file);
         $str = preg_replace($string, $replace, $str, $limit);
@@ -27,7 +27,7 @@ class Library extends Controller
         fclose($text);
     }
 
-    protected function match_file_all($string, $file){
+    public function match_file_all($string, $file){
         $text = fopen($file, 'r');
         $str = file_get_contents($file);
         preg_match_all($string, $str, $out, PREG_PATTERN_ORDER);
@@ -35,7 +35,7 @@ class Library extends Controller
         return $out;
     }
 
-    protected function replace_file_callback($string, $function, $file, $limit = -1){
+    public function replace_file_callback($string, $function, $file, $limit = -1){
         $text = fopen($file, 'r');
         $str = file_get_contents($file);
         $str = preg_replace_callback($string, $function, $str, $limit);
@@ -43,7 +43,7 @@ class Library extends Controller
         $this->filewrite($file, $str);
     }
 
-    protected function filewrite($file, $add) {
+    public function filewrite($file, $add) {
         $text = fopen($file, 'w+');
         fwrite($text, $add);
         fclose($text);

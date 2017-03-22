@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new ED\GeneratorBundle\EDGeneratorBundle(),
             new ED\CoreBundle\EDCoreBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new ED\TextParserBundle\EDTextParserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

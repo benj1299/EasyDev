@@ -24,6 +24,7 @@ class PageController extends Controller
 
             //Génération du dossier de base
             $generator->baseGenerator();
+
             //Upload des fichiers
             $generator->upload();
 
