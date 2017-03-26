@@ -3,9 +3,9 @@
 namespace ED\GeneratorBundle\Generator;
 
 use ED\GeneratorBundle\Command\BundleClientCommand;
-use ED\GeneratorBundle\Generator\Functions\FormContact;
-use \ZipArchive;
+use ED\GeneratorBundle\Generator\Options\FormContact;
 use ED\TextParserBundle\TextParser\TextParser;
+use ED\GeneratorBundle\Generator\Functions\generateSymfony;
 
 class Generator
 {
@@ -30,33 +30,14 @@ class Generator
     }
 
     public function baseGenerator(){
-        //Création du dossier Symfony
-        $zip = new ZipArchive;
-        if ($zip->open('../tmp/Symfony.zip') === TRUE) {
-            $zip->extractTo("$this->path/");
-            $zip->close();
-            rename("$this->path/Symfony", "$this->path/$this->projectname");
-        } else {
-            //revoyer une erreur
-        }
+            $symfony = new generateSymfony;
+            $symfony->createBase($this->path, $this->projectname);
 
         if (is_dir("$this->path/$this->projectname")) {
-            $textParser = new TextParser;
-            // Génération du bundle
-            $textParser->replace_file("#EdBundle#", $this->projectname . "Bundle", "$this->path/$this->projectname/app/AppKernel.php");
-            $textParser->replace_file("#Ed#i", $this->projectname, "$this->path/$this->projectname/app/config/routing.yml");
-
-            //Renome avec le nom du projet
-            rename("$this->path/$this->projectname/src/Main/EdBundle", $this->bundlepath);
-            rename("$this->bundlepath/Controller/DefaultController.php", "$this->bundlepath/Controller/" . $this->projectname . "Controller.php");
-            rename("$this->bundlepath/Resources/views/Default", "$this->bundlepath/Resources/views/$this->projectname");
-
-            //Ecriture du layout
-            $textParser->filewrite("$this->bundlepath/Resources/views/layout.html.twig", "{% extends '::base.html.twig' %}\n{% block body %}\n{% block ".$this->projectname."_body %}{% endblock %}\n{% endblock %}");
-
-            //Ecriture du fichier bundle
-            rename("$this->path/$this->projectname/src/Main/$this->bundlename/MainEDBundle.php", "$this->path/$this->projectname/src/Main/$this->bundlename/Main$this->bundlename.php");
-            $textParser->replace_file("#EdBundle#i", $this->bundlename, "$this->path/$this->projectname/src/Main/$this->bundlename/Main$this->bundlename.php");
+            $symfony->bundleCreate($this->path, $this->projectname);
+            $symfony->projectRename($this->path, $this->projectname, $this->bundlepath);
+            $symfony->layoutCreate($this->projectname, $this->bundlepath);
+            $symfony->writeBundleFile($this->path, $this->projectname, $this->bundlepath, $this->bundlename);
         }
     }
 
