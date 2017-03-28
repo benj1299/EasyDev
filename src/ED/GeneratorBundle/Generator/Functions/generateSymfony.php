@@ -5,6 +5,12 @@ use ED\TextParserBundle\TextParser\TextParser;
 
 class generateSymfony {
 
+    /**
+     * Création du dossier symfony de base
+     * @param $path
+     * @param $projectname
+     * @throws \Exception
+     */
     public function createBase($path, $projectname) {
       $zip = new \ZipArchive;
       if ($zip->open('../tmp/Symfony.zip') === TRUE) {
@@ -60,6 +66,24 @@ class generateSymfony {
       $textParser = new TextParser;
       rename("$path/$projectname/src/Main/$bundlename/MainEDBundle.php", "$path/$projectname/src/Main/$bundlename/Main$bundlename.php");
       $textParser->replace_file("#EdBundle#i", $bundlename, "$path/$projectname/src/Main/$bundlename/Main$bundlename.php");
+  }
+
+    /**
+     * Génération du fichier base.html.twig
+     * @param $path
+     * @param $projectname
+     * @param $fileHtml
+     */
+    public function createBaseTwigFile($path, $projectname, $fileHtml){
+        $textParser = new TextParser;
+      $basefile = "$path/$projectname/app/Resources/views/base.html.twig";
+      copy("$path/$fileHtml", $basefile);
+      //Suppression des liens CSS, JS
+      $textParser->replace_file("#<link(.*?)>#is", '', $basefile, 1);
+      $textParser->replace_file("#<script(.*?)>(.*)<\/script>#is", "", $basefile, 1);
+      //Création des assets
+      $textParser->replace_file("#<title>(.*)</title>#is", "<title>{% block title %}{% endblock %}</title>\n{% stylesheets 'bundles/$projectname/css/*' filter='cssrewrite' %}<link rel='stylesheet' href='{{ asset_url }}' />{% endstylesheets %}", $basefile);
+      $textParser->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}{% endblock %}\n</body>", $basefile);
   }
 
 }

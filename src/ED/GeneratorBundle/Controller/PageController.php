@@ -10,8 +10,6 @@ use ED\GeneratorBundle\Generator\Generator;
 
 class PageController extends Controller
 {
-    public $json = [];
-    public $check = ['check1' => 'ed_contact'];
 
     public function indexAction(Request $request)
     {
@@ -20,29 +18,8 @@ class PageController extends Controller
         $form = $this->createForm(EdType::class, $validation);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
-            $generator = new Generator($validation);
-
-            //Génération du dossier de base
-            $generator->baseGenerator();
-
-            //Upload des fichiers
-            $generator->upload();
-
-            //Inserer une boucle pour tous les fichiers
-            $bundlepath = $generator->addHtmlFile();
-
-            //Ajout des options dans le json
-            foreach ($this->check as $key => $name) {
-                if($form["$key"]->getData()) { $this->json["$name"] = $generator->check($bundlepath, $name); }
-            }
-
-            $generator->addFunctions($this->json);
-            //Fin de la boucle
-
-            //Ajout des assets
-            $generator->addAssetFile();
-
-            $generator->InfosCreate($this->json);
+            $generator = new Generator;
+            $generator->call($validation);
         }
         return $this->render('EDGeneratorBundle:Page:index.html.twig', ['form' => $form->createView()]);
     }

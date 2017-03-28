@@ -6,6 +6,7 @@ use ED\GeneratorBundle\Command\BundleClientCommand;
 use ED\GeneratorBundle\Generator\Options\FormContact;
 use ED\TextParserBundle\TextParser\TextParser;
 use ED\GeneratorBundle\Generator\Functions\generateSymfony;
+use ED\GeneratorBundle\Entity\GeneratorValidation;
 
 class Generator
 {
@@ -18,18 +19,36 @@ class Generator
     protected $fileHtml;
     protected $fileCss;
     protected $fileJs;
+    public $options = [];
+    public $check = ['check1' => 'ed_contact'];
 
-    public function __construct($infos)
-    {
+    /**
+     * Démarre l'algorithme et initialise les fonctions et variables
+     * @param $infos
+     */
+    public function call(GeneratorValidation $infos){
         self::$id = bin2hex(openssl_random_pseudo_bytes(random_int(2, 5)));
         $this->infos = $infos;
         $this->projectname = strip_tags(addslashes(ucfirst($this->infos->projectname)));
         $this->path = "../tmp/".$this->projectname."_".self::$id;
         $this->bundlename = $this->projectname."Bundle";
         $this->bundlepath = "$this->path/$this->projectname/src/Main/$this->bundlename";
+
+        $this->baseGenerator();
+        $this->upload();
+        //Inserer une boucle pour tous les fichiers
+        $htmlFile = $this->addHtmlFile();
+        $this->addAssetFile();
+        $this->checkOptionsValidity($htmlFile);
+        $this->addFunctions($this->options);
+        //Fin de la boucle
+        $this->InfosCreate($this->options);
     }
 
-    public function baseGenerator(){
+    /**
+     * Génère le dossier de base à configurer
+     */
+    private function baseGenerator(){
             $symfony = new generateSymfony;
             $symfony->createBase($this->path, $this->projectname);
 
@@ -37,25 +56,31 @@ class Generator
             $symfony->bundleCreate($this->path, $this->projectname);
             $symfony->projectRename($this->path, $this->projectname, $this->bundlepath);
             $symfony->layoutCreate($this->projectname, $this->bundlepath);
-            $symfony->writeBundleFile($this->path, $this->projectname, $this->bundlepath, $this->bundlename);
+            $symfony->writeBundleFile($this->path, $this->projectname, $this->bundlename);
         }
     }
 
-    public function upload()
+    /**
+     * Upload les fichiers
+     * @return string
+     */
+    private function upload()
     {
-        if ($this->infos->getfiles()->guessExtension() == 'html') {
-            $this->fileHtml = $this->infos->getfiles()->getClientOriginalName();
-            $this->infos->getfiles()->move($this->path, $this->fileHtml);
+        $file = $this->infos->getfiles();
+
+        if ($file->guessExtension() == 'html') {
+            $this->fileHtml = $file->getClientOriginalName();
+            $file->move($this->path, $this->fileHtml);
             return "$this->path/$this->fileHtml";
         }
-        elseif ($this->infos->getfiles()->guessExtension() == 'css') {
-            $this->fileCss = $this->infos->getfiles()->getClientOriginalName();
-            $this->infos->getfiles()->move($this->path, $this->fileCss);
+        elseif ($file->guessExtension() == 'css') {
+            $this->fileCss = $file->getClientOriginalName();
+            $file->move($this->path, $this->fileCss);
             return "$this->path/$this->fileCss";
         }
-        elseif ($this->infos->getfiles()->guessExtension() == 'js') {
-            $this->fileJs = $this->infos->getfiles()->getClientOriginalName();
-            $this->infos->getfiles()->move($this->path, $this->fileJs);
+        elseif ($file->guessExtension() == 'js') {
+            $this->fileJs = $file->getClientOriginalName();
+            $file->move($this->path, $this->fileJs);
             return "$this->path/$this->fileJs";
         }
         else {
@@ -63,20 +88,20 @@ class Generator
         }
     }
 
+    /**
+     * Ajoute les html dans les bundles
+     * @return string
+     */
     public function addHtmlFile() {
         $textParser = new TextParser;
+        $symfony = new generateSymfony;
+
         $file = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $this->fileHtml));
-        //Génération du fichier base.html.twig
-        if($file === 'index'){
-            $basefile = "$this->path/$this->projectname/app/Resources/views/base.html.twig";
-            copy("$this->path/$this->fileHtml", $basefile);
-            //Suppression des liens CSS, JS
-            $textParser->replace_file("#<link(.*?)>#is", '', $basefile, 1);
-            $textParser->replace_file("#<script(.*?)>(.*)<\/script>#is", "", $basefile, 1);
-            //Création des assets
-            $textParser->replace_file("#<title>(.*)</title>#is", "<title>{% block title %}{% endblock %}</title>\n{% stylesheets 'bundles/$this->projectname/css/*' filter='cssrewrite' %}<link rel='stylesheet' href='{{ asset_url }}' />{% endstylesheets %}", $basefile);
-            $textParser->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}{% endblock %}\n</body>", $basefile);
+
+        if($this->fileHtml == 'index.html'){
+            $symfony->createBaseTwigFile($this->path, $this->projectname, $this->fileHtml);
         }
+
         //Déplace le fichier dans les vues
         rename("$this->path/$this->fileHtml", "$this->bundlepath/Resources/views/$this->projectname/$this->fileHtml.twig");
 
@@ -100,31 +125,51 @@ class Generator
         return "$this->bundlepath/Resources/views/$this->projectname/$this->fileHtml.twig";
     }
 
-    public function addAssetFile() {
-     if($this->fileCss){rename("$this->path/$this->fileCss", "$this->bundlepath/Resources/public/$this->fileCss");}
-     if($this->fileJs){rename("$this->path/$this->fileJs", "$this->bundlepath/Resources/public/$this->fileJs");}
+    /**
+     * Ajoute et vérifie les options dans l'array options[]
+     */
+    private function checkOptionsValidity(string $htmlFile){
+        foreach ($this->check as $key => $name) {
+            if($this->infos->$key) { $this->options["$name"] = $htmlFile; }
+        }
     }
 
-    public function addFunctions(array $json)
+    /**
+     * Ajoute les bundles au dossiers selon les options
+     * @param array $json
+     */
+    private function addFunctions(array $options)
     {
         $file = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $this->fileHtml));
-        if(!empty($json['ed_contact']) && $json['ed_contact'] === true)
+        if(!empty($options['ed_contact']) && $options['ed_contact'] === true)
         {
             new FormContact($this->bundlepath, $file);
         }
-        if(!empty($json['ed_fos_admin']) && $json['ed_fos_admin'] === true)
+        if(!empty($options['ed_fos_admin']) && $options['ed_fos_admin'] === true)
         {
             new FOSAdmin($this->bundlepath, $file);
         }
     }
 
-    public function InfosCreate(array $json){
+    /**
+     * Ajoute les assets dans les bundles
+     */
+    private function addAssetFile() {
+        if($this->fileCss){rename("$this->path/$this->fileCss", "$this->bundlepath/Resources/public/$this->fileCss");}
+        if($this->fileJs){rename("$this->path/$this->fileJs", "$this->bundlepath/Resources/public/$this->fileJs");}
+    }
+
+    /**
+     * Créé le json et Readme.md
+     * @param array $json
+     */
+    private function InfosCreate(array $json){
         $json['projectname'] = $this->projectname;
         //Créé le json
         $file = fopen("$this->path/config_".self::$id.".json", 'w+');
         fputs($file, json_encode($json));
         fclose($file);
-        //Créé le TODO
+        //Créé le Readme.md
         $todo = "cmd :\r\n
         composer update\r\n
         php bin/console cache:clear\r\n
@@ -134,4 +179,5 @@ class Generator
         fputs($file, $todo);
         fclose($file);
     }
+
 }
