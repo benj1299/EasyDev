@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26aff39e-a3b7-4b91-a5d8-25323de3ba2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" />
     </list>
     <ignored path="EasyDev.iws" />
@@ -47,27 +44,27 @@
       <file leaf-file-name="Generator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+            <state relative-caret-position="1248">
+              <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
               <folding>
                 <element signature="e#48#99#0#PHP" expanded="true" />
-                <element signature="e#633#734#0#PHP" expanded="false" />
-                <element signature="e#1555#1612#0#PHP" expanded="false" />
-                <element signature="e#1617#2158#0#PHP" expanded="false" />
-                <element signature="e#2164#2224#0#PHP" expanded="false" />
-                <element signature="e#2229#3041#0#PHP" expanded="false" />
-                <element signature="e#3047#3120#0#PHP" expanded="false" />
-                <element signature="e#3125#5411#0#PHP" expanded="false" />
-                <element signature="e#5417#5488#0#PHP" expanded="false" />
-                <element signature="e#5493#5691#0#PHP" expanded="false" />
-                <element signature="e#5697#5790#0#PHP" expanded="false" />
-                <element signature="e#5795#6247#0#PHP" expanded="false" />
-                <element signature="e#5943#6087#0#PHP" expanded="false" />
-                <element signature="e#6096#6241#0#PHP" expanded="false" />
-                <element signature="e#6253#6306#0#PHP" expanded="false" />
-                <element signature="e#6311#6585#0#PHP" expanded="false" />
-                <element signature="e#6591#6661#0#PHP" expanded="false" />
-                <element signature="e#6666#7235#0#PHP" expanded="false" />
+                <element signature="e#638#739#0#PHP" expanded="false" />
+                <element signature="e#1560#1617#0#PHP" expanded="false" />
+                <element signature="e#1622#2163#0#PHP" expanded="false" />
+                <element signature="e#2169#2229#0#PHP" expanded="false" />
+                <element signature="e#2234#3046#0#PHP" expanded="false" />
+                <element signature="e#3052#3125#0#PHP" expanded="false" />
+                <element signature="e#3130#5416#0#PHP" expanded="false" />
+                <element signature="e#5422#5493#0#PHP" expanded="false" />
+                <element signature="e#5498#5702#0#PHP" expanded="false" />
+                <element signature="e#5708#5801#0#PHP" expanded="false" />
+                <element signature="e#5806#6258#0#PHP" expanded="false" />
+                <element signature="e#5954#6098#0#PHP" expanded="false" />
+                <element signature="e#6107#6252#0#PHP" expanded="false" />
+                <element signature="e#6264#6317#0#PHP" expanded="false" />
+                <element signature="e#6322#6596#0#PHP" expanded="false" />
+                <element signature="e#6602#6672#0#PHP" expanded="false" />
+                <element signature="e#6677#7246#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -202,20 +199,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -555,12 +538,12 @@
       <workItem from="1490191900811" duration="54000" />
       <workItem from="1490525631960" duration="2295000" />
       <workItem from="1490566059410" duration="1787000" />
-      <workItem from="1490718017694" duration="2169000" />
+      <workItem from="1490718017694" duration="2338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197935000" />
+    <option name="totallyTimeSpent" value="198104000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -641,8 +624,13 @@
           <line>52</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php</url>
+          <line>130</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -859,27 +847,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+        <state relative-caret-position="1248">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
           <folding>
             <element signature="e#48#99#0#PHP" expanded="true" />
-            <element signature="e#633#734#0#PHP" expanded="false" />
-            <element signature="e#1555#1612#0#PHP" expanded="false" />
-            <element signature="e#1617#2158#0#PHP" expanded="false" />
-            <element signature="e#2164#2224#0#PHP" expanded="false" />
-            <element signature="e#2229#3041#0#PHP" expanded="false" />
-            <element signature="e#3047#3120#0#PHP" expanded="false" />
-            <element signature="e#3125#5411#0#PHP" expanded="false" />
-            <element signature="e#5417#5488#0#PHP" expanded="false" />
-            <element signature="e#5493#5691#0#PHP" expanded="false" />
-            <element signature="e#5697#5790#0#PHP" expanded="false" />
-            <element signature="e#5795#6247#0#PHP" expanded="false" />
-            <element signature="e#5943#6087#0#PHP" expanded="false" />
-            <element signature="e#6096#6241#0#PHP" expanded="false" />
-            <element signature="e#6253#6306#0#PHP" expanded="false" />
-            <element signature="e#6311#6585#0#PHP" expanded="false" />
-            <element signature="e#6591#6661#0#PHP" expanded="false" />
-            <element signature="e#6666#7235#0#PHP" expanded="false" />
+            <element signature="e#638#739#0#PHP" expanded="false" />
+            <element signature="e#1560#1617#0#PHP" expanded="false" />
+            <element signature="e#1622#2163#0#PHP" expanded="false" />
+            <element signature="e#2169#2229#0#PHP" expanded="false" />
+            <element signature="e#2234#3046#0#PHP" expanded="false" />
+            <element signature="e#3052#3125#0#PHP" expanded="false" />
+            <element signature="e#3130#5416#0#PHP" expanded="false" />
+            <element signature="e#5422#5493#0#PHP" expanded="false" />
+            <element signature="e#5498#5702#0#PHP" expanded="false" />
+            <element signature="e#5708#5801#0#PHP" expanded="false" />
+            <element signature="e#5806#6258#0#PHP" expanded="false" />
+            <element signature="e#5954#6098#0#PHP" expanded="false" />
+            <element signature="e#6107#6252#0#PHP" expanded="false" />
+            <element signature="e#6264#6317#0#PHP" expanded="false" />
+            <element signature="e#6322#6596#0#PHP" expanded="false" />
+            <element signature="e#6602#6672#0#PHP" expanded="false" />
+            <element signature="e#6677#7246#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

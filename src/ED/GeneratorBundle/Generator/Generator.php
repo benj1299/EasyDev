@@ -2,7 +2,6 @@
 
 namespace ED\GeneratorBundle\Generator;
 
-use ED\GeneratorBundle\Command\BundleClientCommand;
 use ED\GeneratorBundle\Generator\Options\FormContact;
 use ED\TextParserBundle\TextParser\TextParser;
 use ED\GeneratorBundle\Generator\Functions\generateSymfony;
@@ -20,7 +19,7 @@ class Generator
     protected $fileCss;
     protected $fileJs;
     public $options = [];
-    public $check = ['check1' => 'ed_contact'];
+    const CHECKOPTIONS = ['check1' => 'ed_contact'];
 
     /**
      * Démarre l'algorithme et initialise les fonctions et variables
@@ -129,7 +128,7 @@ class Generator
      * Ajoute et vérifie les options dans l'array options[]
      */
     private function checkOptionsValidity(string $htmlFile){
-        foreach ($this->check as $key => $name) {
+        foreach (self::CHECKOPTIONS as $key => $name) {
             if($this->infos->$key) { $this->options["$name"] = $htmlFile; }
         }
     }

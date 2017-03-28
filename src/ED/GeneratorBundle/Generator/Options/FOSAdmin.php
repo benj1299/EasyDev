@@ -1,6 +1,6 @@
 <?php
 
-namespace ED\GeneratorBundle\Generator\Functions;
+namespace ED\GeneratorBundle\Generator\Options;
 
 use ED\GeneratorBundle\Generator\Generator;
 
