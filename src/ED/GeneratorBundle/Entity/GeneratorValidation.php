@@ -49,12 +49,19 @@ class GeneratorValidation
     public $bddname;
     public $bddid;
     public $bddpass;
-    /**
-     * @Assert\File(
-     *     binaryFormat = false,
-     *     maxSize = "40Mi",
-     *     maxSizeMessage = "Le fichier est trop grand ({{ size }} {{ suffix }}). La taille maximum autorisée est de {{ limit }} {{ suffix }}.",
-     *     disallowEmptyMessage = "Vous n'avez pas uploadé de fichier"
+    /*
+     * @Assert\Collection(
+     *  fields = {
+     *     "html" = {
+     *  @Assert\File(
+     *               binaryFormat = false,
+     *               maxSize = "40Mi",
+     *               maxSizeMessage = "Le fichier est trop grand ({{ size }} {{ suffix }}). La taille maximum autorisée est de {{ limit }} {{ suffix }}.",
+     *               disallowEmptyMessage = "Vous n'avez pas uploadé de fichier"
+     *      )
+     *  }
+     * },
+     *     allowMissingFields = true
      * )
      */
     public $files;
@@ -277,11 +284,12 @@ class GeneratorValidation
     }
 
     /**
-     * @param mixed $files
+     * @param mixed $key
+     * @param mixed $value
      */
-    public function setFiles($files)
+    public function setFiles($key, $value)
     {
-        $this->files = $files;
+        $this->files[$key] = $value;
     }
 
 }

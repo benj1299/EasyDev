@@ -33,6 +33,7 @@
             </div>
             <div class="form-group">
                     {{ form_row(form.files) }}
+                    <a href="#" id="add_files" class="btn btn-info">Add a file</a>
             </div>
         </div>
         <div class="text-center">
@@ -42,6 +43,44 @@
     {{ form_end(form) }}
 {% endblock %}
 {% block ed_js %}
-    <script>$("#ed_sql").fileinput();</script>
-    <script>$("#ed_files").fileinput();</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $container = $('div#ed_files');
+            var index = $container.find(':input').length;
+            $('#add_files').click(function(e) {
+                addCategory($container);
+                e.preventDefault();
+                return false;
+            });
+
+            if (index == 0) {
+                addCategory($container);
+            } else {
+                $container.children('div').each(function() {
+                    addDeleteLink($(this));
+                });
+            }
+
+            function addCategory($container) {
+                var template = $container.attr('data-prototype')
+                                .replace(/__name__label__/g, 'File n°' + (index+1))
+                                .replace(/__name__/g,        index)
+                        ;
+                var $prototype = $(template);
+                addDeleteLink($prototype);
+                $container.append($prototype);
+                index++;
+            }
+
+            function addDeleteLink($prototype) {
+                var $deleteLink = $('<a href="#" class="btn btn-danger">Supprimer</a>');
+                $prototype.append($deleteLink);
+                $deleteLink.click(function(e) {
+                    $prototype.remove();
+                    e.preventDefault();
+                    return false;
+                });
+            }
+        });
+    </script>
 {% endblock %}
