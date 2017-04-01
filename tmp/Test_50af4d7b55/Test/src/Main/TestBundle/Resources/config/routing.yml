@@ -1,0 +1,3 @@
+main_contact:
+    path:     /
+    defaults: { _controller: MainTestBundle:Test:contact }
