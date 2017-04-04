@@ -43,8 +43,8 @@ class TextParser extends Controller
         $this->filewrite($file, $str);
     }
 
-    public function filewrite($file, $add) {
-        $text = fopen($file, 'w+');
+    public function filewrite($file, $add, $state = "w+") {
+        $text = fopen($file, $state);
         fwrite($text, $add);
         fclose($text);
     }

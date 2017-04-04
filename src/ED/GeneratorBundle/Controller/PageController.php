@@ -13,7 +13,6 @@ class PageController extends Controller
 
     public function indexAction(Request $request)
     {
-        //Création du formulaire dans la vue avec vérification
         $validation = new GeneratorValidation;
         $form = $this->createForm(EdType::class, $validation);
 

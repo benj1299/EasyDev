@@ -10,14 +10,13 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Generator
 {
-    protected static $id;
+    protected $id;
     protected $path;
     protected $infos;
     protected $projectname;
     protected $bundlename;
     protected $bundlepath;
-    protected $fileCss;
-    protected $fileJs;
+    protected $configApp = [];
     const CHECKOPTIONS = ['check1' => 'ed_contact'];
 
     /**
@@ -25,23 +24,24 @@ class Generator
      * @param $infos
      */
     public function call(GeneratorValidation $infos){
-        self::$id = bin2hex(openssl_random_pseudo_bytes(random_int(2, 5)));
         $this->infos = $infos;
+        $this->id = bin2hex(openssl_random_pseudo_bytes(random_int(2, 5)));
         $this->projectname = strip_tags(addslashes(ucfirst($this->infos->projectname)));
-        $this->path = "../tmp/".$this->projectname."_".self::$id;
+        $this->path = "../tmp/".$this->projectname."_".$this->id;
         $this->bundlename = $this->projectname."Bundle";
         $this->bundlepath = "$this->path/$this->projectname/src/Main/$this->bundlename";
 
         $this->baseGenerator();
         foreach ($this->infos->getfiles() as $files){
             $type = $this->upload($files);
-            if ($type == "html")
+            if ($type["html"])
             {
-                $views = $this->addHtmlFile($files);
-                $this->addFunctions($files, $this->checkOptionsValidity($views));
+                $views = $this->addHtmlFile($files->getClientOriginalName());
+                $this->addFunctions($files->getClientOriginalName(), $this->checkOptionsValidity($views));
             }
-            else { $this->addAssetFile(); }
+            else { $this->addAssetFile($files->getClientOriginalName()); }
         }
+        $this->configApp($this->configApp);
         $this->InfosCreate();
     }
 
@@ -69,17 +69,17 @@ class Generator
         if ($file->guessExtension() == 'html') {
             $htmlFile = $file->getClientOriginalName();
             $file->move($this->path, $htmlFile);
-            return "$this->path/$htmlFile";
+            return ["html" => $htmlFile];
         }
         elseif ($file->guessExtension() == 'css') {
             $cssFile = $file->getClientOriginalName();
             $file->move($this->path, $cssFile);
-            return "$this->path/$cssFile";
+            return ["css" => $cssFile];
         }
         elseif ($file->guessExtension() == 'js') {
             $jsFile = $file->getClientOriginalName();
             $file->move($this->path, $jsFile);
-            return "$this->path/$jsFile";
+            return ["js" => $jsFile];
         }
         else {
             // return une erreur
@@ -94,8 +94,6 @@ class Generator
         $textParser = new TextParser;
         $symfony = new generateSymfony;
 
-        $nameFile = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $files));
-
         if($files == 'index.html'){
             $symfony->createBaseTwigFile($this->path, $this->projectname, $files);
         }
@@ -103,22 +101,15 @@ class Generator
         //Déplace le fichier dans les vues
         rename("$this->path/$files", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
 
-        //Adaption du controller
-        $textParser->replace_file("#Default#", $this->projectname, "$this->bundlepath/Controller/" . $this->projectname . "Controller.php", 1);
-        $textParser->replace_file("#EdBundle#", $this->bundlename, "$this->bundlepath/Controller/" . $this->projectname . "Controller.php", 1);
-        $textParser->replace_file("#extends Controller\n{#",
-            "extends Controller {\n public function ".$nameFile."Action(){ return \$this->render('Main$this->bundlename:$this->projectname:$files.twig'); }",
-            "$this->bundlepath/Controller/" . $this->projectname . "Controller.php");
-
-        //Ecriture de la route
-        $textParser->filewrite("$this->bundlepath/Resources/config/routing.yml", "main_$nameFile:\n\040\040\040\040path:     /\n\040\040\040\040defaults: { _controller: Main$this->bundlename:$this->projectname:$nameFile }\n");
-
         //Ecriture des vues
         $titre = $textParser->match_file_all("#<title>(.*)</title>#is", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
         $body = $textParser->match_file_all("#<body>(.*)</body>#is", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
         $titre = implode("",$titre[1]); $body = implode("", $body[1]);
         $textParser->replace_file("#(.*)#", "", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
         $textParser->filewrite("$this->bundlepath/Resources/views/$this->projectname/$files.twig", "{% extends 'Main$this->bundlename::layout.html.twig' %}\n{% block title %}$titre{% endblock %}\n{% block ".$this->projectname."_body %}$body{% endblock %}");
+
+        // Enregistre la page dans la config
+        $this->configApp[] = $files;
 
         return "$this->bundlepath/Resources/views/$this->projectname/$files.twig";
     }
@@ -160,13 +151,40 @@ class Generator
     }
 
     /**
+     * Configure l'application
+     * @param array $configApp
+     */
+    private function configApp(array $configApp){
+        $textParser = new TextParser;
+        $symfony = new generateSymfony;
+        $controller = ""; $routing = "";
+
+        foreach ($configApp as $files) {
+            $nameFile = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $files));
+            $controller .= "\n public function ".$nameFile."Action(){ return \$this->render('Main$this->bundlename:$this->projectname:$files.twig');}";
+            if($nameFile == 'index'){
+                $routing .= "main_".$this->projectname."_$nameFile:\n\040\040\040\040path:     /\n\040\040\040\040defaults: { _controller: Main$this->bundlename:$this->projectname:$nameFile }\n";
+            }
+            else {
+                $routing .= "main_$nameFile:\n\040\040\040\040path:     /$nameFile\n\040\040\040\040defaults: { _controller: Main$this->bundlename:$this->projectname:$nameFile }\n";
+            }
+        }
+        //Création  du controller
+        $symfony->controllerGenerate($this->projectname, $this->bundlepath, $this->bundlename, $controller);
+
+        //Ecriture de la route
+        $symfony->routingGenerate($this->bundlepath, $this->path, $this->projectname, $routing);
+
+    }
+
+    /**
      * Créé le json et Readme.md
      * @param array $json
      */
     private function InfosCreate(){
         $json['projectname'] = $this->projectname;
         //Créé le json
-        $file = fopen("$this->path/config_".self::$id.".json", 'w+');
+        $file = fopen("$this->path/config_".$this->id.".json", 'w+');
         fputs($file, json_encode($json));
         fclose($file);
         //Créé le Readme.md
