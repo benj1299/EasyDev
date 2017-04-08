@@ -2,49 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26aff39e-a3b7-4b91-a5d8-25323de3ba2d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/AppCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/AppKernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/Resources/views/base.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/bootstrap.php.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/config_dev.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/config_prod.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/config_test.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/parameters.yml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/routing_dev.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/security.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/app/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/bin/console" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/bin/symfony_requirements" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Controller/TestController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/MainTestBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/config/services.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/views/Test/contact.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/views/layout.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/app_dev.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/web/robots.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/Symfony.zip" afterPath="$PROJECT_DIR$/tmp/Symfony.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/Symfony.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO.txt" afterPath="$PROJECT_DIR$/TODO.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" afterPath="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ED/TextParserBundle/TextParser/TextParser.php" afterPath="$PROJECT_DIR$/src/ED/TextParserBundle/TextParser/TextParser.php" />
     </list>
     <ignored path="EasyDev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,65 +34,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Generator.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Generator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="163" column="149" selection-start-line="163" selection-start-column="149" selection-end-line="163" selection-end-column="149" />
+            <state relative-caret-position="155">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
               <folding>
                 <element signature="e#48#101#0#PHP" expanded="true" />
                 <element signature="e#568#669#0#PHP" expanded="false" />
-                <element signature="e#1676#1733#0#PHP" expanded="false" />
-                <element signature="e#1738#2279#0#PHP" expanded="false" />
-                <element signature="e#2285#2345#0#PHP" expanded="false" />
-                <element signature="e#2350#3074#0#PHP" expanded="false" />
-                <element signature="e#3080#3153#0#PHP" expanded="false" />
-                <element signature="e#3158#4481#0#PHP" expanded="false" />
-                <element signature="e#4487#4558#0#PHP" expanded="false" />
-                <element signature="e#4563#4809#0#PHP" expanded="false" />
-                <element signature="e#4815#4868#0#PHP" expanded="false" />
-                <element signature="e#4873#5154#0#PHP" expanded="false" />
-                <element signature="e#5160#5253#0#PHP" expanded="false" />
-                <element signature="e#5258#5709#0#PHP" expanded="false" />
-                <element signature="e#5405#5549#0#PHP" expanded="false" />
-                <element signature="e#5558#5703#0#PHP" expanded="false" />
-                <element signature="e#5715#5788#0#PHP" expanded="false" />
-                <element signature="e#6996#7066#0#PHP" expanded="false" />
-                <element signature="e#7071#7629#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tmp/Test_a5ad19771f/Test/src/Main/TestBundle/Controller/TestController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="93" selection-start-line="8" selection-start-column="93" selection-end-line="8" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generateSymfony.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="104" column="101" selection-start-line="104" selection-start-column="101" selection-end-line="104" selection-end-column="101" />
-              <folding>
-                <element signature="e#134#261#0#PHP" expanded="false" />
-                <element signature="e#266#611#0#PHP" expanded="false" />
-                <element signature="e#617#714#0#PHP" expanded="false" />
-                <element signature="e#719#925#0#PHP" expanded="false" />
-                <element signature="e#931#1051#0#PHP" expanded="false" />
-                <element signature="e#1056#1420#0#PHP" expanded="false" />
-                <element signature="e#1426#1516#0#PHP" expanded="false" />
-                <element signature="e#1521#1820#0#PHP" expanded="false" />
-                <element signature="e#1826#1951#0#PHP" expanded="false" />
-                <element signature="e#2330#2456#0#PHP" expanded="false" />
-                <element signature="e#2461#3286#0#PHP" expanded="false" />
-                <element signature="e#3292#3495#0#PHP" expanded="false" />
-                <element signature="e#4015#4345#0#PHP" expanded="false" />
+                <element signature="e#1563#1620#0#PHP" expanded="false" />
+                <element signature="e#1625#2166#0#PHP" expanded="false" />
+                <element signature="e#2172#2232#0#PHP" expanded="false" />
+                <element signature="e#2983#3056#0#PHP" expanded="false" />
+                <element signature="e#3061#4109#0#PHP" expanded="false" />
+                <element signature="e#4115#4186#0#PHP" expanded="false" />
+                <element signature="e#4191#4437#0#PHP" expanded="false" />
+                <element signature="e#4443#4536#0#PHP" expanded="false" />
+                <element signature="e#4541#4992#0#PHP" expanded="false" />
+                <element signature="e#4688#4832#0#PHP" expanded="false" />
+                <element signature="e#4841#4986#0#PHP" expanded="false" />
+                <element signature="e#4998#5071#0#PHP" expanded="false" />
+                <element signature="e#5076#6343#0#PHP" expanded="false" />
+                <element signature="e#5250#5994#0#PHP" expanded="false" />
+                <element signature="e#6349#6419#0#PHP" expanded="false" />
+                <element signature="e#6424#6982#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -177,7 +103,6 @@
         <option value="$PROJECT_DIR$/tmp/Symfony/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/tmp/Symfony/app/config/config.yml" />
         <option value="$PROJECT_DIR$/tmp/Test_80844c1ab5/Test/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/textParser.php" />
         <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/TextParser.php" />
         <option value="$PROJECT_DIR$/src/ED/TextParserBundle/Resources/config/services.yml" />
@@ -193,9 +118,10 @@
         <option value="$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/ED/TextParserBundle/TextParser/TextParser.php" />
         <option value="$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Controller/TestController.php" />
-        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" />
-        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" />
         <option value="$PROJECT_DIR$/tmp/Test_a5ad19771f/Test/src/Main/TestBundle/Controller/TestController.php" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php" />
+        <option value="$PROJECT_DIR$/TODO.txt" />
+        <option value="$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php" />
       </list>
     </option>
   </component>
@@ -239,8 +165,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,144 +207,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_a5ad19771f" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_a5ad19771f" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_a5ad19771f" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_a5ad19771f" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test_a5ad19771f" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -487,63 +273,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GeneratorBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Generator" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Functions" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EasyDev" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ED" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GeneratorBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
+              <option name="myItemId" value="Entity" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -561,8 +291,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EasyDev" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,12 +489,13 @@
       <workItem from="1490922773599" duration="7636000" />
       <workItem from="1491052868389" duration="637000" />
       <workItem from="1491053620817" duration="2096000" />
-      <workItem from="1491293555493" duration="5795000" />
+      <workItem from="1491293555493" duration="6117000" />
+      <workItem from="1491643779861" duration="6119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215369000" />
+    <option name="totallyTimeSpent" value="221810000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -756,10 +507,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27544427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27948305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51371807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -826,11 +577,6 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php</url>
-          <line>119</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php</url>
           <line>13</line>
           <option name="timeStamp" value="10" />
@@ -846,17 +592,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_c24b1da007/Test/src/Main/TestBundle/Resources/views/layout.html.twig" />
-    <entry file="file://$PROJECT_DIR$/tmp/Test_c24b1da007/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
-    <entry file="file://$PROJECT_DIR$/tmp/Test_c24b1da007/Test/src/Main/TestBundle/Resources/config/routing.yml" />
-    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/TextParser.php" />
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -895,14 +630,6 @@
     <entry file="file://$PROJECT_DIR$/tmp/Test_50af4d7b55/TODO.txt" />
     <entry file="file://$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Resources/config/routing.yml" />
     <entry file="file://$PROJECT_DIR$/tmp/Test_50af4d7b55/Test/src/Main/TestBundle/Controller/TestController.php" />
-    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Entity/GeneratorValidation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Form/EdType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -922,183 +649,108 @@
     <entry file="file://$PROJECT_DIR$/tmp/Test_80e49875/Test/src/Main/TestBundle/Controller/TestController.php" />
     <entry file="file://$PROJECT_DIR$/tmp/Test_0018/Test/src/Main/TestBundle/Controller/TestController.php" />
     <entry file="file://$PROJECT_DIR$/tmp/Test_0018/TODO.txt" />
-    <entry file="file://$PROJECT_DIR$/tmp/Test_94c2fe8268/config_94c2fe8268.json">
+    <entry file="file://$PROJECT_DIR$/tmp/Test_94c2fe8268/config_94c2fe8268.json" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/app/Resources/views/base.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Controller/DefaultController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_043cf9/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_043cf9/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_cab3/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_cab3/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_e69a74/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d618586e1c/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d618586e1c/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/src/Main/TestBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/AppKernel.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/config/config.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/tmp/Test_a5ad19771f/Test/src/Main/TestBundle/Controller/TestController.php" />
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_d99b2a/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_043cf9/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_043cf9/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Symfony/src/Main/EdBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_cab3/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_cab3/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_e69a74/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="192">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding>
+            <element signature="e#134#261#0#PHP" expanded="false" />
+            <element signature="e#266#625#0#PHP" expanded="false" />
+            <element signature="e#631#728#0#PHP" expanded="false" />
+            <element signature="e#733#953#0#PHP" expanded="false" />
+            <element signature="e#959#1079#0#PHP" expanded="false" />
+            <element signature="e#1084#1469#0#PHP" expanded="false" />
+            <element signature="e#1475#1565#0#PHP" expanded="false" />
+            <element signature="e#1570#1883#0#PHP" expanded="false" />
+            <element signature="e#1889#2014#0#PHP" expanded="false" />
+            <element signature="e#2019#2408#0#PHP" expanded="false" />
+            <element signature="e#2414#2540#0#PHP" expanded="false" />
+            <element signature="e#2545#3384#0#PHP" expanded="false" />
+            <element signature="e#3390#3593#0#PHP" expanded="false" />
+            <element signature="e#3598#4107#0#PHP" expanded="false" />
+            <element signature="e#4113#4443#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Controller/PageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_9e86ed74/Test/src/Main/TestBundle/Resources/views/Test/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_d618586e1c/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_d618586e1c/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/src/Main/TestBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="384">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ED/TextParserBundle/TextParser/TextParser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="432">
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_1fafb33a/Test/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Entity/GeneratorValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/UploadedFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="215" column="20" selection-start-line="215" selection-start-column="20" selection-end-line="215" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Test_d71b3ce4be/Test/src/Main/TestBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1106,61 +758,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Functions/generateSymfony.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="104" column="101" selection-start-line="104" selection-start-column="101" selection-end-line="104" selection-end-column="101" />
-          <folding>
-            <element signature="e#134#261#0#PHP" expanded="false" />
-            <element signature="e#266#611#0#PHP" expanded="false" />
-            <element signature="e#617#714#0#PHP" expanded="false" />
-            <element signature="e#719#925#0#PHP" expanded="false" />
-            <element signature="e#931#1051#0#PHP" expanded="false" />
-            <element signature="e#1056#1420#0#PHP" expanded="false" />
-            <element signature="e#1426#1516#0#PHP" expanded="false" />
-            <element signature="e#1521#1820#0#PHP" expanded="false" />
-            <element signature="e#1826#1951#0#PHP" expanded="false" />
-            <element signature="e#2330#2456#0#PHP" expanded="false" />
-            <element signature="e#2461#3286#0#PHP" expanded="false" />
-            <element signature="e#3292#3495#0#PHP" expanded="false" />
-            <element signature="e#4015#4345#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ED/GeneratorBundle/Generator/Generator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="163" column="149" selection-start-line="163" selection-start-column="149" selection-end-line="163" selection-end-column="149" />
+        <state relative-caret-position="155">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
           <folding>
             <element signature="e#48#101#0#PHP" expanded="true" />
             <element signature="e#568#669#0#PHP" expanded="false" />
-            <element signature="e#1676#1733#0#PHP" expanded="false" />
-            <element signature="e#1738#2279#0#PHP" expanded="false" />
-            <element signature="e#2285#2345#0#PHP" expanded="false" />
-            <element signature="e#2350#3074#0#PHP" expanded="false" />
-            <element signature="e#3080#3153#0#PHP" expanded="false" />
-            <element signature="e#3158#4481#0#PHP" expanded="false" />
-            <element signature="e#4487#4558#0#PHP" expanded="false" />
-            <element signature="e#4563#4809#0#PHP" expanded="false" />
-            <element signature="e#4815#4868#0#PHP" expanded="false" />
-            <element signature="e#4873#5154#0#PHP" expanded="false" />
-            <element signature="e#5160#5253#0#PHP" expanded="false" />
-            <element signature="e#5258#5709#0#PHP" expanded="false" />
-            <element signature="e#5405#5549#0#PHP" expanded="false" />
-            <element signature="e#5558#5703#0#PHP" expanded="false" />
-            <element signature="e#5715#5788#0#PHP" expanded="false" />
-            <element signature="e#6996#7066#0#PHP" expanded="false" />
-            <element signature="e#7071#7629#0#PHP" expanded="false" />
+            <element signature="e#1563#1620#0#PHP" expanded="false" />
+            <element signature="e#1625#2166#0#PHP" expanded="false" />
+            <element signature="e#2172#2232#0#PHP" expanded="false" />
+            <element signature="e#2983#3056#0#PHP" expanded="false" />
+            <element signature="e#3061#4109#0#PHP" expanded="false" />
+            <element signature="e#4115#4186#0#PHP" expanded="false" />
+            <element signature="e#4191#4437#0#PHP" expanded="false" />
+            <element signature="e#4443#4536#0#PHP" expanded="false" />
+            <element signature="e#4541#4992#0#PHP" expanded="false" />
+            <element signature="e#4688#4832#0#PHP" expanded="false" />
+            <element signature="e#4841#4986#0#PHP" expanded="false" />
+            <element signature="e#4998#5071#0#PHP" expanded="false" />
+            <element signature="e#5076#6343#0#PHP" expanded="false" />
+            <element signature="e#5250#5994#0#PHP" expanded="false" />
+            <element signature="e#6349#6419#0#PHP" expanded="false" />
+            <element signature="e#6424#6982#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Test_a5ad19771f/Test/src/Main/TestBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="93" selection-start-line="8" selection-start-column="93" selection-end-line="8" selection-end-column="93" />
-          <folding />
         </state>
       </provider>
     </entry>

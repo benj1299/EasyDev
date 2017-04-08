@@ -34,15 +34,13 @@ class Generator
         $this->baseGenerator();
         foreach ($this->infos->getfiles() as $files){
             $type = $this->upload($files);
-            if ($type["html"])
+            if ($type)
             {
                 $views = $this->addHtmlFile($files->getClientOriginalName());
                 $this->addFunctions($files->getClientOriginalName(), $this->checkOptionsValidity($views));
             }
-            else { $this->addAssetFile($files->getClientOriginalName()); }
         }
         $this->configApp($this->configApp);
-        $this->InfosCreate();
     }
 
     /**
@@ -66,20 +64,21 @@ class Generator
      */
     private function upload(UploadedFile $file)
     {
+        //trouver méthode plus safe que guessClientExtension()
         if ($file->guessExtension() == 'html') {
             $htmlFile = $file->getClientOriginalName();
             $file->move($this->path, $htmlFile);
-            return ["html" => $htmlFile];
+            return true;
         }
-        elseif ($file->guessExtension() == 'css') {
+        elseif ($file->guessClientExtension() == 'css') {
             $cssFile = $file->getClientOriginalName();
-            $file->move($this->path, $cssFile);
-            return ["css" => $cssFile];
+            $file->move("$this->bundlepath/Resources/public/css/", $cssFile);
+            return false;
         }
-        elseif ($file->guessExtension() == 'js') {
+        elseif ($file->guessClientExtension() == 'js') {
             $jsFile = $file->getClientOriginalName();
-            $file->move($this->path, $jsFile);
-            return ["js" => $jsFile];
+            $file->move("$this->bundlepath/Resources/public/js/", $jsFile);
+            return false;
         }
         else {
             // return une erreur
@@ -99,19 +98,20 @@ class Generator
         }
 
         //Déplace le fichier dans les vues
-        rename("$this->path/$files", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
+        $place = "$this->bundlepath/Resources/views/$this->projectname/$files.twig";
+        rename("$this->path/$files", $place);
 
         //Ecriture des vues
-        $titre = $textParser->match_file_all("#<title>(.*)</title>#is", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
-        $body = $textParser->match_file_all("#<body>(.*)</body>#is", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
+        $titre = $textParser->match_file_all("#<title>(.*)</title>#is", $place);
+        $body = $textParser->match_file_all("#<body>(.*)</body>#is", $place);
         $titre = implode("",$titre[1]); $body = implode("", $body[1]);
-        $textParser->replace_file("#(.*)#", "", "$this->bundlepath/Resources/views/$this->projectname/$files.twig");
-        $textParser->filewrite("$this->bundlepath/Resources/views/$this->projectname/$files.twig", "{% extends 'Main$this->bundlename::layout.html.twig' %}\n{% block title %}$titre{% endblock %}\n{% block ".$this->projectname."_body %}$body{% endblock %}");
+        $textParser->replace_file("#(.*)#", "", $place);
+        $textParser->filewrite($place, "{% extends 'Main$this->bundlename::layout.html.twig' %}\n{% block title %}$titre{% endblock %}\n{% block ".$this->projectname."_body %}$body{% endblock %}");
 
         // Enregistre la page dans la config
         $this->configApp[] = $files;
 
-        return "$this->bundlepath/Resources/views/$this->projectname/$files.twig";
+        return $place;
     }
 
     /**
@@ -123,14 +123,6 @@ class Generator
             if($this->infos->$key) { $options["$name"] = $htmlFile; }
         }
         return $options;
-    }
-
-    /**
-     * Ajoute les assets dans les bundles
-     */
-    private function addAssetFile() {
-        if($this->fileCss){rename("$this->path/$this->fileCss", "$this->bundlepath/Resources/public/css/$this->fileCss");}
-        if($this->fileJs){rename("$this->path/$this->fileJs", "$this->bundlepath/Resources/public/js/$this->fileJs");}
     }
 
     /**
@@ -175,13 +167,15 @@ class Generator
         //Ecriture de la route
         $symfony->routingGenerate($this->bundlepath, $this->path, $this->projectname, $routing);
 
+        //Création du json et readme.md
+        $this->infosCreate();
     }
 
     /**
      * Créé le json et Readme.md
      * @param array $json
      */
-    private function InfosCreate(){
+    private function infosCreate(){
         $json['projectname'] = $this->projectname;
         //Créé le json
         $file = fopen("$this->path/config_".$this->id.".json", 'w+');
