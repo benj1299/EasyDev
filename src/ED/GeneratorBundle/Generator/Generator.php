@@ -34,8 +34,7 @@ class Generator
         $this->baseGenerator();
         foreach ($this->infos->getfiles() as $files){
             $type = $this->upload($files);
-            if ($type)
-            {
+            if ($type) {
                 $views = $this->addHtmlFile($files->getClientOriginalName());
                 $this->addFunctions($files->getClientOriginalName(), $this->checkOptionsValidity($views));
             }
@@ -169,6 +168,11 @@ class Generator
 
         //Création du json et readme.md
         $this->infosCreate();
+
+        $symfony->compress($this->path, $this->id);
+
+        //Efface le dossier pour ne laisser que le zip
+        $textParser->rmAllDir($this->path);
     }
 
     /**
@@ -190,6 +194,10 @@ class Generator
         $file = fopen("$this->path/TODO.txt", 'w+');
         fputs($file, $todo);
         fclose($file);
+    }
+
+    public function getLink(){
+        return $this->id;
     }
 
 }

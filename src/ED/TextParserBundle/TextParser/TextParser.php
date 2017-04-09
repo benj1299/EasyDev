@@ -56,4 +56,20 @@ class TextParser extends Controller
         return false;
     }
 
+    public function rmAllDir($strDirectory){
+        $handle = opendir($strDirectory);
+        while(false !== ($entry = readdir($handle))){
+            if($entry != '.' && $entry != '..'){
+                if(is_dir($strDirectory.'/'.$entry)){
+                    $this->rmAllDir($strDirectory.'/'.$entry);
+                }
+                elseif(is_file($strDirectory.'/'.$entry)){
+                    unlink($strDirectory.'/'.$entry);
+                }
+            }
+        }
+        rmdir($strDirectory.'/'.$entry);
+        closedir($handle);
+    }
+
 }

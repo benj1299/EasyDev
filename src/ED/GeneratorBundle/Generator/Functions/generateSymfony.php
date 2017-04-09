@@ -2,6 +2,9 @@
 namespace ED\GeneratorBundle\Generator\Functions;
 
 use ED\TextParserBundle\TextParser\TextParser;
+use \ZipArchive;
+use \RecursiveIteratorIterator;
+use \RecursiveDirectoryIterator;
 
 class generateSymfony {
 
@@ -73,12 +76,15 @@ class generateSymfony {
      * @param $fileHtml
      */
     public function createBaseTwigFile(string $path, string $projectname, $fileHtml){
-        $textParser = new TextParser;
+      $textParser = new TextParser;
       $basefile = "$path/$projectname/app/Resources/views/base.html.twig";
+
       copy("$path/$fileHtml", $basefile);
-      //Suppression des liens CSS, JS
+
+        //Suppression des liens CSS, JS
       $textParser->replace_file("#<link(.*?)>#is", '', $basefile, 1);
       $textParser->replace_file("#<script(.*?)>(.*)<\/script>#is", "", $basefile, 1);
+
       //Création des assets
       $textParser->replace_file("#<title>(.*)</title>#is", "<title>{% block title %}{% endblock %}</title>\n{% stylesheets 'bundles/$projectname/css/*' filter='cssrewrite' %}<link rel='stylesheet' href='{{ asset_url }}' />{% endstylesheets %}", $basefile);
       $textParser->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}{% endblock %}\n</body>", $basefile);
@@ -107,5 +113,53 @@ class generateSymfony {
         $textParser->filewrite("$bundlepath/Resources/config/routing.yml", $routing);
         $textParser->replace_file("#ed#i", $projectname, "$path/$projectname/app/config/routing.yml");
     }
+
+    public function compress($source, $id){
+            $destination = "../web/download/$id.zip";
+
+            if (!extension_loaded('zip') || !file_exists($source)) {
+                return false;
+            }
+
+            $zip = new ZipArchive();
+            if (!$zip->open($destination, ZIPARCHIVE::CREATE)) {
+                return false;
+            }
+
+            $source = str_replace('\\', '/', realpath($source));
+
+            if (is_dir($source) === true)
+            {
+                $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($source), RecursiveIteratorIterator::SELF_FIRST);
+
+                foreach ($files as $file)
+                {
+                    $file = str_replace('\\', '/', $file);
+
+                    // Ignore "." and ".." folders
+                    if( in_array(substr($file, strrpos($file, '/')+1), array('.', '..')) )
+                        continue;
+
+                    $file = realpath($file);
+
+                    if (is_dir($file) === true)
+                    {
+                        $zip->addEmptyDir(str_replace($source . '/', '', $file . '/'));
+                    }
+                    else if (is_file($file) === true)
+                    {
+                        $zip->addFromString(str_replace($source . '/', '', $file), file_get_contents($file));
+                    }
+                }
+            }
+            else if (is_file($source) === true)
+            {
+                $zip->addFromString(basename($source), file_get_contents($source));
+            }
+
+            return $zip->close();
+        }
+
+
 }
 

@@ -1,3 +1,6 @@
 use PHPHtmlParser\Dom; pour modifier structure html des fichiers
 -faire système gestion d'erreur qui n'arrête pas l'algo pour dire à l'utilisateur ce qui n'as pas marché
 -Gérer la validation des fichiers par le form
+-Revoir pour gestion des assets de base.html.twig des fichiers générés dans chaque fichier (index, contact,..)
+-Faire système de compression du dossier et lien de téléchargement
+-

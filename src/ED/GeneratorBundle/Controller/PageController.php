@@ -10,7 +10,6 @@ use ED\GeneratorBundle\Generator\Generator;
 
 class PageController extends Controller
 {
-
     public function indexAction(Request $request)
     {
         $validation = new GeneratorValidation;
