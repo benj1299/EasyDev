@@ -15,16 +15,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">EasyDev</a>
+                <a class="navbar-brand" href="{{ path('ed_homepage') }}">EasyDev</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        <li><a href="#">{{ app.user.username }}</a></li>
+                        <li class="active"><a href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>
                         <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
                     {% else %}
                         <li class="active"><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
-                        <li><a href="{{ path("fos_user_register") }}">Inscription</a></li>
+                        <li><a href="{{ path("fos_user_registration_register") }}">Inscription</a></li>
                     {% endif %}
                     <li><a href="#">Langues</a></li>
                 </ul>
@@ -33,7 +33,17 @@
         </div>
     </nav>
     <div class="container">
-    {% block ed_body %}{% endblock %}
+        {% for type, messages in app.session.flashBag.all %}
+            {% for message in messages %}
+                <div class="{{ type }}">
+                    {{ message|trans({}, 'FOSUserBundle') }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+            {% block fos_user_content %}{% endblock fos_user_content %}
+            {% block ed_body %}{% endblock %}
+
     </div>
     <footer>
         <p class="text-center">©2017 - EasyDev, Inc.</p>

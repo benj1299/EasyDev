@@ -75,12 +75,13 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+        uglifyjs2:
+            bin: /usr/local/bin/uglifyjs
 
-# FOSUserBundle
 fos_user:
     db_driver:     orm
     firewall_name: main
-    user_class:    User\UserBundle\Entity\User
+    user_class:    ED\UserBundle\Entity\User
     from_email:
-            address: benjaminkauffmann@hotmail.com
-            sender_name: ben
+        address: benjaminkauffmann@hotmail.com
+        sender_name: ben

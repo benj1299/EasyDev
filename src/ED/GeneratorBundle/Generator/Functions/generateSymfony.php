@@ -108,15 +108,26 @@ class generateSymfony {
             }");
     }
 
+    /**
+     * Génère les routes du projet
+     * @param string $bundlepath
+     * @param string $path
+     * @param string $projectname
+     * @param $routing
+     */
     public function routingGenerate(string $bundlepath, string $path, string $projectname, $routing){
         $textParser = new TextParser;
         $textParser->filewrite("$bundlepath/Resources/config/routing.yml", $routing);
         $textParser->replace_file("#ed#i", $projectname, "$path/$projectname/app/config/routing.yml");
     }
 
-    public function compress($source, $id){
-            $destination = "../web/download/$id.zip";
-
+    /**
+     * Créer une archive zip d'un dossier
+     * @param $source
+     * @param $destination
+     * @return bool
+     */
+    public function compress($source, $destination){
             if (!extension_loaded('zip') || !file_exists($source)) {
                 return false;
             }
@@ -159,7 +170,5 @@ class generateSymfony {
 
             return $zip->close();
         }
-
-
 }
 

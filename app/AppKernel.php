@@ -16,11 +16,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new ED\GeneratorBundle\EDGeneratorBundle(),
-            new ED\CoreBundle\EDCoreBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new ED\TextParserBundle\EDTextParserBundle(),
-            new User\UserBundle\UserUserBundle(),
+            new ED\UserBundle\EDUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new ED\CoreBundle\EDCoreBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

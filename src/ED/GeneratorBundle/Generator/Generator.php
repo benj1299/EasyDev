@@ -33,8 +33,7 @@ class Generator
 
         $this->baseGenerator();
         foreach ($this->infos->getfiles() as $files){
-            $type = $this->upload($files);
-            if ($type) {
+            if ($this->upload($files)) {
                 $views = $this->addHtmlFile($files->getClientOriginalName());
                 $this->addFunctions($files->getClientOriginalName(), $this->checkOptionsValidity($views));
             }
@@ -77,6 +76,11 @@ class Generator
         elseif ($file->guessClientExtension() == 'js') {
             $jsFile = $file->getClientOriginalName();
             $file->move("$this->bundlepath/Resources/public/js/", $jsFile);
+            return false;
+        }
+        elseif ($file->guessClientExtension() == 'png' || $file->guessClientExtension() == 'jpg' || $file->guessClientExtension() == 'gif' || $file->guessClientExtension() == 'jpeg') {
+            $imgFile = $file->getClientOriginalName();
+            $file->move("$this->bundlepath/Resources/public/images/", $imgFile);
             return false;
         }
         else {
@@ -169,7 +173,7 @@ class Generator
         //Création du json et readme.md
         $this->infosCreate();
 
-        $symfony->compress($this->path, $this->id);
+        $symfony->compress($this->path, $this->getLink());
 
         //Efface le dossier pour ne laisser que le zip
         $textParser->rmAllDir($this->path);
@@ -197,7 +201,11 @@ class Generator
     }
 
     public function getLink(){
-        return $this->id;
+        return "../tmp/download/$this->id.zip";
+    }
+
+    public function getProjectname(){
+        return $this->projectname;
     }
 
 }

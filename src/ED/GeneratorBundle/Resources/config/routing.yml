@@ -1,3 +1,0 @@
-ed_generator_homepage:
-    path:     /
-    defaults: { _controller: EDGeneratorBundle:Page:index }
