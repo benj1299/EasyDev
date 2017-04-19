@@ -4,5 +4,5 @@ use PHPHtmlParser\Dom; pour modifier structure html des fichiers
 -Revoir pour gestion des assets de base.html.twig des fichiers générés dans chaque fichier (index, contact,..)
 -Gérer les images pour l'upload
 -Utiliser nginx plus apache pour le serveur
--espace membre
+-design espace membre
 -interface admin

@@ -35,9 +35,10 @@ class Generator
         foreach ($this->infos->getfiles() as $files){
             if ($this->upload($files)) {
                 $views = $this->addHtmlFile($files->getClientOriginalName());
-                $this->addFunctions($files->getClientOriginalName(), $this->checkOptionsValidity($views));
+                $option = $this->checkOptionsValidity($views);
             }
         }
+        $this->addFunctions($option);
         $this->configApp($this->configApp);
     }
 
@@ -123,7 +124,7 @@ class Generator
     private function checkOptionsValidity(string $htmlFile){
         $options = [];
         foreach (self::CHECKOPTIONS as $key => $name) {
-            if($this->infos->$key) { $options["$name"] = $htmlFile; }
+            if($this->infos->$key) { $options["$name"][] = $htmlFile; }
         }
         return $options;
     }
@@ -132,16 +133,15 @@ class Generator
      * Ajoute les bundles au dossiers selon les options
      * @param array $json
      */
-    private function addFunctions($files ,array $options)
+    private function addFunctions(array $options)
     {
-        $file = strtolower(preg_replace('#\.[a-zA-Z0-9]{1,10}#', '', $files));
         if(!empty($options['ed_contact']) && $options['ed_contact'] === true)
         {
-            new FormContact($this->bundlepath, $file);
+            new FormContact($this->bundlepath, $options['ed_contact']);
         }
         if(!empty($options['ed_fos_admin']) && $options['ed_fos_admin'] === true)
         {
-            new FOSAdmin($this->bundlepath, $file);
+            new FOSAdmin($this->bundlepath, $options);
         }
     }
 
