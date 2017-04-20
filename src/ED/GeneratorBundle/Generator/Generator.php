@@ -137,11 +137,11 @@ class Generator
     {
         if(!empty($options['ed_contact']) && $options['ed_contact'] === true)
         {
-            new FormContact($this->bundlepath, $options['ed_contact']);
+            new FormContact($options['ed_contact']);
         }
         if(!empty($options['ed_fos_admin']) && $options['ed_fos_admin'] === true)
         {
-            new FOSAdmin($this->bundlepath, $options);
+            new FOSAdmin($options['ed_fos_admin']);
         }
     }
 

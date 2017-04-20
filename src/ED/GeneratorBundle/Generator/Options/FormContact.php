@@ -3,6 +3,7 @@
 namespace ED\GeneratorBundle\Generator\Options;
 
 use ED\GeneratorBundle\Generator\Generator;
+use ED\TextParserBundle\TextParser\TextParser;
 use PHPHtmlParser\Dom;
 
 class FormContact extends Generator {
@@ -27,7 +28,8 @@ class FormContact extends Generator {
                  "name"    => $dom->find('.contact-name'),
                  "email"   => $dom->find('.contact-email'),
                  "subject" => $dom->find('.contact-subject'),
-                 "message" => $dom->find('.contact-message')
+                 "message" => $dom->find('.contact-message'),
+                 "submit"  => $dom->find('.contact-submit')
         ];
 
     }
@@ -40,10 +42,66 @@ class FormContact extends Generator {
     private function parsingFile(array $input, string $file){
 
         if(isset($input["form"])){
-            //créer tous les fichier de formulaire et tout.
-        }
+            $textParser = new TextParser;
+            $nameFile = basename($file);
 
-        //Faire boucle pour implémenter chaque fonction dans un champs.
+            //Création du formulaire
+            mkdir("$this->bundlepath/Form/");
+            $use = "";
+            $add = "";
+            //ajout des use
+            if(isset($input['name']) || isset($input['subject'])){
+                $use .= "use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;\n";
+            }
+            if(isset($input['email'])){
+                $use .= "use Symfony\\Component\\Form\\Extension\\Core\\Type\\EmailType;\n";
+            }
+            if(isset($input['message'])){
+                $use .= "use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType;\n";
+            }
+            if(isset($input['submit'])){
+                $use .= "use Symfony\\Component\\Form\\Extension\\Core\\Type\\SubmitType;\n";
+            }
+
+
+            //ajout des champs
+            //TODO : Finir les options des champs
+
+            foreach ($input as $key => $value){
+                foreach ($value as $add){
+
+                    $nameAdd     = str_replace('contact-', "", $add->getAttribute('class'));
+                    $type = ($nameAdd == 'name' || $nameAdd == 'subject') ? "TextType" : ($nameAdd == 'email') ? "EmailType" : ($nameAdd == 'message') ? "TextareaType" : ($nameAdd == 'submit') ? "SubmitType" : null;
+                    $class       = isset($add->getAttribute('class')) ? "'class' => '".$add->getAttribute('class') : "";
+                    $placeholder = isset($add->getAttribute('placeholder')) ? "'placeholder' => '".$add->getAttribute('class')."'," : "";
+                    $id          = isset($add->getAttribute('id')) ? "'id' => ".$add->getAttribute('id')."," : "";
+                    $require     = is_null($add->getAttribute('required')) ? "'required' => false," : "";
+
+                    $add .= "->add('".$nameAdd.", $type, [$require 'attr' => [$placeholder $id $class], 'label' => false]'),\n";
+                }
+            }
+
+            $type = "<?php \n
+                    namespace Main\\$this->bundlename\\Form;\n
+                            
+                    use Symfony\\Component\\Form\\AbstractType;\n
+                    use Symfony\\Component\\Form\\FormBuilderInterface;\n
+                    $use
+                            
+                    class ".$nameFile."Type extends AbstractType\n
+                    {\n
+                            public function buildForm(FormBuilderInterface \$builder, array \$options)\n
+                            {\n
+                                \$builder\n
+                                    $add
+                            }\n
+                     }";
+            $textParser->filewrite("$this->bundlepath/Form/$nameFile.php", $type);
+
+            //Création de la validation
+            mkdir("$this->bundlepath/Entity/");
+            $textParser->filewrite("$this->bundlepath/Entity/".$nameFile."Validation.php", $validation);
+        }
 
     }
 
