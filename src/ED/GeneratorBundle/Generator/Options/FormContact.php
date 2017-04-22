@@ -2,17 +2,16 @@
 
 namespace ED\GeneratorBundle\Generator\Options;
 
-use ED\GeneratorBundle\Generator\Generator;
 use ED\TextParserBundle\TextParser\TextParser;
 use PHPHtmlParser\Dom;
 
-class FormContact extends Generator {
+class FormContact {
 
-    public function __construct(array $options)
-    {
+    public function create(array $options, string $bundlepath, string $bundlename){
         foreach ($options as $file){
-            $input = $this->analyseFile($file);
-            $this->parsingFile($input, $file);
+            $file_dir = str_replace("..", "", $file);
+            $input = $this->analyseFile(dirname(dirname(dirname(dirname(dirname(__DIR__))))).$file_dir);
+            $this->parsingFile($input, $file, $bundlepath, $bundlename);
         }
     }
 
@@ -39,16 +38,20 @@ class FormContact extends Generator {
      * @param array $information
      * @param string $file
      */
-    private function parsingFile(array $input, string $file){
-
-        if(isset($input["form"])){
+    private function parsingFile(array $input, string $file, string $bundlepath, string $bundlename){
+        if($input["form"]){
             $textParser = new TextParser;
-            $nameFile = basename($file);
+            $nameFile = str_replace('.html.twig', "", basename($file)); //TODO : Changer par un meilleur pattern
+            $use = "";
+            $add_type = "";
+            $validation = "";
 
             //Création du formulaire
-            mkdir("$this->bundlepath/Form/");
-            $use = "";
-            $add = "";
+            $form_dir = "$bundlepath/Form";
+            if(!is_dir($form_dir)){
+                mkdir($form_dir);
+            }
+
             //ajout des use
             if(isset($input['name']) || isset($input['subject'])){
                 $use .= "use Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType;\n";
@@ -65,42 +68,46 @@ class FormContact extends Generator {
 
 
             //ajout des champs
-            //TODO : Finir les options des champs
+            //TODO : Finir d'ajouter les options des champs
 
-            foreach ($input as $key => $value){
+
+            foreach ($input as $value){ //TODO: Tranformer object $value en array
                 foreach ($value as $add){
-
                     $nameAdd     = str_replace('contact-', "", $add->getAttribute('class'));
-                    $type = ($nameAdd == 'name' || $nameAdd == 'subject') ? "TextType" : ($nameAdd == 'email') ? "EmailType" : ($nameAdd == 'message') ? "TextareaType" : ($nameAdd == 'submit') ? "SubmitType" : null;
-                    $class       = isset($add->getAttribute('class')) ? "'class' => '".$add->getAttribute('class') : "";
-                    $placeholder = isset($add->getAttribute('placeholder')) ? "'placeholder' => '".$add->getAttribute('class')."'," : "";
-                    $id          = isset($add->getAttribute('id')) ? "'id' => ".$add->getAttribute('id')."," : "";
+                    $type        = ($nameAdd == 'name' || $nameAdd == 'subject') ? "TextType" : ($nameAdd == 'email') ? "EmailType" : ($nameAdd == 'message') ? "TextareaType" : ($nameAdd == 'submit') ? "SubmitType" : null;
+                    $class       = !empty($add->getAttribute('class')) ? "'class' => '".$add->getAttribute('class')."'" : "";
+                    $placeholder = !empty($add->getAttribute('placeholder')) ? "'placeholder' => '".$add->getAttribute('class')."'," : "";
+                    $id          = !empty($add->getAttribute('id')) ? "'id' => '".$add->getAttribute('id')."'," : "";
                     $require     = is_null($add->getAttribute('required')) ? "'required' => false," : "";
 
-                    $add .= "->add('".$nameAdd.", $type, [$require 'attr' => [$placeholder $id $class], 'label' => false]'),\n";
+                    $add_type .= "->add('".$nameAdd."', '$type', [$require 'attr' => [$placeholder $id $class], 'label' => false]')\n";
                 }
-            }
 
+            }
             $type = "<?php \n
-                    namespace Main\\$this->bundlename\\Form;\n
-                            
-                    use Symfony\\Component\\Form\\AbstractType;\n
-                    use Symfony\\Component\\Form\\FormBuilderInterface;\n
-                    $use
-                            
-                    class ".$nameFile."Type extends AbstractType\n
-                    {\n
-                            public function buildForm(FormBuilderInterface \$builder, array \$options)\n
-                            {\n
-                                \$builder\n
-                                    $add
-                            }\n
-                     }";
-            $textParser->filewrite("$this->bundlepath/Form/$nameFile.php", $type);
+namespace Main\\$bundlename\\Form;\n
+        
+use Symfony\\Component\\Form\\AbstractType;\n
+use Symfony\\Component\\Form\\FormBuilderInterface;\n
+$use
+        
+class ".$nameFile."Type extends AbstractType\n
+{\n
+        public function buildForm(FormBuilderInterface \$builder, array \$options)\n
+        {\n
+            \$builder\n
+                $add_type
+        }\n
+ }";
+
+            $textParser->filewrite("$bundlepath/Form/".$nameFile."Type.php", $type);
 
             //Création de la validation
-            mkdir("$this->bundlepath/Entity/");
-            $textParser->filewrite("$this->bundlepath/Entity/".$nameFile."Validation.php", $validation);
+            $form_validation = "$bundlepath/Entity";
+            if(!is_dir($form_validation)){
+                mkdir($form_validation);
+            }
+            $textParser->filewrite("$bundlepath/Entity/".$nameFile."Validation.php", $validation);
         }
 
     }

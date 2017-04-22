@@ -1,4 +1,0 @@
-main_ed:
-    resource: "@MainEdBundle/Resources/config/routing.yml"
-    prefix:   /
-

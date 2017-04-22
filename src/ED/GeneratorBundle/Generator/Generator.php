@@ -135,11 +135,12 @@ class Generator
      */
     private function addFunctions(array $options)
     {
-        if(!empty($options['ed_contact']) && $options['ed_contact'] === true)
+        if(isset($options['ed_contact']))
         {
-            new FormContact($options['ed_contact']);
+            $formContact = new FormContact;
+            $formContact->create($options['ed_contact'], $this->bundlepath, $this->bundlename);
         }
-        if(!empty($options['ed_fos_admin']) && $options['ed_fos_admin'] === true)
+        if(isset($options['ed_fos_admin']))
         {
             new FOSAdmin($options['ed_fos_admin']);
         }
