@@ -1,10 +1,12 @@
 <?php
-namespace ED\GeneratorBundle\Generator\Functions;
+namespace ED\GeneratorBundle\Generator\Library;
 
 use ED\TextParserBundle\TextParser\TextParser;
 use \ZipArchive;
 use \RecursiveIteratorIterator;
 use \RecursiveDirectoryIterator;
+use PHPHtmlParser\Dom;
+
 
 class generateSymfony {
 
@@ -47,16 +49,6 @@ class generateSymfony {
     }
 
     /**
-     * Ecriture du layout
-     * @param $projectname
-     * @param $bundlepath
-     */
-    public function layoutCreate(string $projectname, string $bundlepath){
-        $textParser = new TextParser;
-        $textParser->filewrite("$bundlepath/Resources/views/layout.html.twig", "{% extends '::base.html.twig' %}\n{% block body %}\n{% block ".$projectname."_body %}{% endblock %}\n{% endblock %}");
-    }
-
-    /**
      * Ecriture du fichier bundle
      *
      * @param $path
@@ -79,7 +71,7 @@ class generateSymfony {
       $textParser = new TextParser;
       $basefile = "$path/$projectname/app/Resources/views/base.html.twig";
 
-      copy("$path/$fileHtml", $basefile);
+      copy("$fileHtml", $basefile);
 
         //Suppression des liens CSS, JS
       $textParser->replace_file("#<link(.*?)>#is", '', $basefile, 1);
@@ -89,6 +81,27 @@ class generateSymfony {
       $textParser->replace_file("#<title>(.*)</title>#is", "<title>{% block title %}{% endblock %}</title>\n{% stylesheets 'bundles/$projectname/css/*' filter='cssrewrite' %}<link rel='stylesheet' href='{{ asset_url }}' />{% endstylesheets %}", $basefile);
       $textParser->replace_file("#<body>(.*)</body>#is", "<body>\n{% block body %}{% endblock %}\n</body>", $basefile);
   }
+
+    /**
+     * Ecriture du layout
+     * @param $projectname
+     * @param $bundlepath
+     */
+    public function layoutCreate(string $projectname, string $bundlepath, $file){
+        $textParser = new TextParser;
+        $dom = new Dom;
+        $dom->loadFromFile($file);
+
+        //TODO: Gérer les liens et les navs mieux que cela
+        $nav = $dom->find('.nav')[0];
+
+        $add = "{% extends '::base.html.twig' %}\n
+        {% block body %}\n
+        $nav
+        {% block ".$projectname."_body %}{% endblock %}\n
+        {% endblock %}";
+        $textParser->filewrite("$bundlepath/Resources/views/layout.html.twig", $add);
+    }
 
     /**
      * Ajoute l'Action du controller selon le fichier ajouté

@@ -4,7 +4,7 @@ namespace ED\GeneratorBundle\Generator;
 
 use ED\GeneratorBundle\Generator\Options\FormContact;
 use ED\TextParserBundle\TextParser\TextParser;
-use ED\GeneratorBundle\Generator\Functions\generateSymfony;
+use ED\GeneratorBundle\Generator\Library\generateSymfony;
 use ED\GeneratorBundle\Entity\GeneratorValidation;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -52,7 +52,6 @@ class Generator
         if (is_dir("$this->path/$this->projectname")) {
             $symfony->bundleCreate($this->path, $this->projectname);
             $symfony->projectRename($this->path, $this->projectname, $this->bundlepath);
-            $symfony->layoutCreate($this->projectname, $this->bundlepath);
             $symfony->writeBundleFile($this->path, $this->projectname, $this->bundlename);
         }
     }
@@ -97,13 +96,14 @@ class Generator
         $textParser = new TextParser;
         $symfony = new generateSymfony;
 
-        if($files == 'index.html'){
-            $symfony->createBaseTwigFile($this->path, $this->projectname, $files);
-        }
-
         //Déplace le fichier dans les vues
         $place = "$this->bundlepath/Resources/views/$this->projectname/$files.twig";
         rename("$this->path/$files", $place);
+
+        if($files == 'index.html'){
+            $symfony->createBaseTwigFile($this->path, $this->projectname, $place);
+            $symfony->layoutCreate($this->projectname, $this->bundlepath, $place);
+        }
 
         //Ecriture des vues
         $titre = $textParser->match_file_all("#<title>(.*)</title>#is", $place);
@@ -201,12 +201,127 @@ class Generator
         fclose($file);
     }
 
+      /* GETTERS AND SETTERS */
+
+    /**
+     * @return string
+     */
     public function getLink(){
         return "../tmp/download/$this->id.zip";
     }
 
-    public function getProjectname(){
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPath()
+    {
+        return $this->path;
+    }
+
+    /**
+     * @param mixed $path
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getInfos()
+    {
+        return $this->infos;
+    }
+
+    /**
+     * @param mixed $infos
+     */
+    public function setInfos($infos)
+    {
+        $this->infos = $infos;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProjectname()
+    {
         return $this->projectname;
     }
+
+    /**
+     * @param mixed $projectname
+     */
+    public function setProjectname($projectname)
+    {
+        $this->projectname = $projectname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBundlename()
+    {
+        return $this->bundlename;
+    }
+
+    /**
+     * @param mixed $bundlename
+     */
+    public function setBundlename($bundlename)
+    {
+        $this->bundlename = $bundlename;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBundlepath()
+    {
+        return $this->bundlepath;
+    }
+
+    /**
+     * @param mixed $bundlepath
+     */
+    public function setBundlepath($bundlepath)
+    {
+        $this->bundlepath = $bundlepath;
+    }
+
+    /**
+     * @return array
+     */
+    public function getConfigApp()
+    {
+        return $this->configApp;
+    }
+
+    /**
+     * @param array $configApp
+     */
+    public function setConfigApp($configApp)
+    {
+        $this->configApp = $configApp;
+    }
+
+
 
 }
