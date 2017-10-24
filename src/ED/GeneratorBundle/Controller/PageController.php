@@ -30,7 +30,7 @@ class PageController extends Controller
      * @param $name
      * @return Response
      */
-    private function download(string $filename, string $name){
+    public function download(string $filename, string $name){
         $response = new Response();
 
         $response->headers->set('Cache-Control', 'private');

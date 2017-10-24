@@ -17,7 +17,8 @@ class Generator
     protected $bundlename;
     protected $bundlepath;
     protected $configApp = [];
-    const CHECKOPTIONS = ['check1' => 'ed_contact'];
+    protected $listUpload = [];
+    const CHECKOPTIONS = ['check1' => 'form-contact'];
 
     /**
      * Démarre l'algorithme et initialise les fonctions et variables
@@ -34,11 +35,10 @@ class Generator
         $this->baseGenerator();
         foreach ($this->infos->getfiles() as $files){
             if ($this->upload($files)) {
-                $views = $this->addHtmlFile($files->getClientOriginalName());
-                $option = $this->checkOptionsValidity($views);
+                $this->addHtmlFile($files->getClientOriginalName());
             }
         }
-        $this->addFunctions($option);
+        $this->addFunctions($this->checkOptionsValidity($this->infos), $this->listUpload);
         $this->configApp($this->configApp);
     }
 
@@ -66,6 +66,7 @@ class Generator
         if ($file->guessExtension() == 'html') {
             $htmlFile = $file->getClientOriginalName();
             $file->move($this->path, $htmlFile);
+            $this->listUpload[] = $htmlFile;
             return true;
         }
         elseif ($file->guessClientExtension() == 'css') {
@@ -121,10 +122,10 @@ class Generator
     /**
      * Vérifie et ajoute les options dans l'array options[]
      */
-    private function checkOptionsValidity(string $htmlFile){
+    private function checkOptionsValidity($infos){
         $options = [];
         foreach (self::CHECKOPTIONS as $key => $name) {
-            if($this->infos->$key) { $options["$name"][] = $htmlFile; }
+            if($infos->$key) { $options["$name"] = true; }
         }
         return $options;
     }
@@ -133,16 +134,12 @@ class Generator
      * Ajoute les bundles au dossiers selon les options
      * @param array $json
      */
-    private function addFunctions(array $options)
+    private function addFunctions(array $options, array $listUpload)
     {
-        if(isset($options['ed_contact']))
+        if(isset($options['form-contact']))
         {
             $formContact = new FormContact;
-            $formContact->create($options['ed_contact'], $this->bundlepath, $this->bundlename);
-        }
-        if(isset($options['ed_fos_admin']))
-        {
-            new FOSAdmin($options['ed_fos_admin']);
+            $formContact->create($listUpload, $this->bundlepath, $this->bundlename, $this->projectname);
         }
     }
 
@@ -165,6 +162,7 @@ class Generator
                 $routing .= "main_$nameFile:\n\040\040\040\040path:     /$nameFile\n\040\040\040\040defaults: { _controller: Main$this->bundlename:$this->projectname:$nameFile }\n";
             }
         }
+
         //Création  du controller
         $symfony->controllerGenerate($this->projectname, $this->bundlepath, $this->bundlename, $controller);
 
@@ -174,6 +172,7 @@ class Generator
         //Création du json et readme.md
         $this->infosCreate();
 
+        //zippage du fichier
         $symfony->compress($this->path, $this->getLink());
 
         //Efface le dossier pour ne laisser que le zip
@@ -321,7 +320,5 @@ class Generator
     {
         $this->configApp = $configApp;
     }
-
-
 
 }
