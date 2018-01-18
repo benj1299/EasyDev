@@ -3,7 +3,7 @@
 Easydev est un générateur de Backend Symfony3 fait avec :heart: . <br> 
 Avec un simple upload de fichiers html et css, l'algorithme détecte
 votre code, le parse et génère le backend correspondant en symfony3.
-<br><br> **/!\ Fonctionnelle, en partie, mais comprend encore quelques bugs /!\\** 
+<br><br> **/!\ Fonctionnel mais comprend encore quelques bugs /!\\** 
 
 Installation
 ======
@@ -36,15 +36,15 @@ une nomenclature HTML/CSS doit être respectée.<br>
 Elle se présente sous la forme de <br>\<type class="#class#">\</type>
 
 ### Contact Form
-Name         | Class           | Input
------------- | -------------   | -------------
-form         | contact-form    | form
-name         | contact-name    | input
-email        | contact-email   | input
-subject      | contact-subject | input
-phone        | contact-phone   | input
-message      | contact-message | textarea
-submit       | contact-submit  | input
+ Type            | #Class#
+------------     | -------------  
+form             | contact-form
+input            | contact-name
+input            | contact-email
+input            | contact-subject
+input            | contact-phone
+textarea         | contact-message
+input            | contact-submit
 
 ### Sans option
 Le générateur générera un projet symfony selon les informations remplies et configura <br> un base.html.twig, un layout.html.twig et les fichiers twig correspondant à chaque page.
